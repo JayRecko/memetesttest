@@ -112,3 +112,118 @@
   object-fit: cover;
   object-position: center top;
 }
+
+/* Updated Color Scheme */
+:root {
+  --neon-cyan: #00f3ff;
+  --cyber-purple: #7d00ff;
+  --matrix-green: #00ff9d;
+  --space-black: #0a0a0a;
+  --star-white: #ffffff;
+}
+
+/* Layout Improvements */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Enhanced Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--space-black) 30%, var(--cyber-purple) 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: var(--matrix-green);
+  filter: blur(80px);
+  opacity: 0.3;
+}
+
+/* Tokenomics Grid */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--neon-cyan);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+/* Roadmap Timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 3rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: var(--neon-cyan);
+}
+
+.milestone {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+.milestone::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: var(--cyber-purple);
+  border-radius: 50%;
+  border: 3px solid var(--neon-cyan);
+}
+
+/* Social Links Update */
+.x { background: var(--cyber-purple); }
+.telegram { background: var(--neon-cyan); }
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .cta-button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .timeline::before {
+    left: 5px;
+  }
+}
+
+/* Background Image Fix */
+.meme-bg {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center top;
+}
