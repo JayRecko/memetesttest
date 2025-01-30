@@ -1,164 +1,114 @@
-/* General Styles */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #1a1a1a;
-  color: #ffffff;
-  line-height: 1.6;
-  text-align: center;
+/* Updated Color Scheme */
+:root {
+  --neon-cyan: #00f3ff;
+  --cyber-purple: #7d00ff;
+  --matrix-green: #00ff9d;
+  --space-black: #0a0a0a;
+  --star-white: #ffffff;
 }
 
-h1, h2, h3 {
-  color: #ff6f61;
-  margin: 0 0 20px;
-}
-
-a {
-  color: #ff6f61;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #ff3b2f;
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-              url('https://raw.githubusercontent.com/JayRecko/memetesttest/main/1_F3PHIV3ZTnJ-2QtPcQixlg.png') center/cover;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.logo-container {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto 20px;
-  border: 3px solid #ff6f61;
-}
-
-.logo-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-/* Buttons */
-.cta-button {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: #ff6f61;
-  color: #1a1a1a;
-  font-size: 1.1rem;
-  border-radius: 25px;
-  margin: 10px;
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #ff3b2f;
-  transform: translateY(-2px);
-}
-
-/* Features Section */
-.features {
-  padding: 40px 20px;
-  background-color: #2a2a2a;
-}
-
-.feature-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+/* Layout Improvements */
+.container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.feature {
-  background-color: #333;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+/* Enhanced Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--space-black) 30%, var(--cyber-purple) 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-.feature:hover {
-  transform: translateY(-5px);
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: var(--matrix-green);
+  filter: blur(80px);
+  opacity: 0.3;
 }
 
-/* Community Section */
-.community {
-  padding: 40px 20px;
-  background-color: #1a1a1a;
+/* Tokenomics Grid */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--neon-cyan);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
 }
 
-.social-links a {
-  padding: 10px 25px;
-  background-color: #ff6f61;
-  color: #1a1a1a;
-  border-radius: 25px;
+/* Roadmap Timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 3rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    padding: 10px 25px;
-    font-size: 1rem;
-  }
-
-  .feature-list {
-    grid-template-columns: 1fr;
-  }
-
-  .logo-container {
-    width: 100px;
-    height: 100px;
-  }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: var(--neon-cyan);
 }
 
-/* Additional Logo Spots */
-.small-logo {
-  width: 40px;
-  height: 40px;
+.milestone {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+.milestone::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: var(--cyber-purple);
   border-radius: 50%;
-  margin: 0 auto 15px;
-  background: url('https://raw.githubusercontent.com/JayRecko/memetesttest/main/DALL%C2%B7E%202025-01-30%2013.54.07%20-%20A%20futuristic%20AI%20woman%20with%20neon%20green%20hair%20styled%20in%20a%20sleek%20bob%2C%20glowing%20blue%20cybernetic%20eyes%2C%20and%20a%20minimalist%20crown%20of%20light%20symbolizing%20sovereignt.webp') center/cover;
+  border: 3px solid var(--neon-cyan);
 }
 
-/* Footer */
-footer {
-  padding: 30px 20px;
-  background-color: #2a2a2a;
-  margin-top: 40px;
+/* Social Links Update */
+.x { background: var(--cyber-purple); }
+.telegram { background: var(--neon-cyan); }
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .cta-button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .timeline::before {
+    left: 5px;
+  }
+}
+
+/* Background Image Fix */
+.meme-bg {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center top;
 }
