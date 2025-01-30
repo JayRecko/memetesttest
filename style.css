@@ -193,45 +193,66 @@ body {
   border-bottom: 1px solid var(--glass-border);
 }
 
-/* Contract Address */
+/* Updated Contract Address Styles */
 .contract-address {
   background: var(--glass-bg);
   border-radius: 20px;
-  padding: 2rem;
+  padding: 1.5rem;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 2rem auto 0;
 }
 
 .address-container {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.8rem;
   background: rgba(0,0,0,0.3);
-  border-radius: 50px;
-  padding: 0.8rem 1.5rem;
-  margin: 1.5rem 0;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 1rem 0;
 }
 
 #contractAddress {
   font-family: monospace;
   color: var(--ai-teal);
   word-break: break-all;
-  flex: 1;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0;
 }
 
 .copy-button {
   background: var(--space-blue);
   color: white;
   border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 50px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  flex-shrink: 0;
+  font-size: 0.9rem;
+  width: 100%;
 }
 
 .copy-button:hover {
   background: var(--mars-red);
+}
+
+@media (min-width: 480px) {
+  .address-container {
+    flex-direction: row;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  #contractAddress {
+    font-size: 0.9rem;
+  }
+  
+  .copy-button {
+    width: auto;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+  }
 }
 
 /* Roadmap Section */
