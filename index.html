@@ -47,7 +47,7 @@
                  alt="Interplanetary Community">
           </div>
           <h3>Interplanetary Community</h3>
-          <p>Join 50,000+ Martians in our meme alliance.</p>
+          <p>Join our growing Martian meme alliance.</p>
         </div>
         <div class="feature-card">
           <div class="feature-image">
@@ -81,33 +81,28 @@
             <img src="https://img.icons8.com/fluency/96/000000/gift.png" alt="Holder Rewards">
           </div>
           <h3>Holder Rewards</h3>
-          <p>4% of transactions distributed to holders</p>
+          <p>4% rewards for loyal Martians</p>
         </div>
 
-        <!-- Liquidity Pool -->
+        <!-- Start Allocations -->
         <div class="tokenomics-card">
           <div class="tokenomics-icon">
-            <img src="https://img.icons8.com/fluency/96/000000/wallet.png" alt="Liquidity Pool">
+            <img src="https://img.icons8.com/fluency/96/000000/wallet.png" alt="Start Allocations">
           </div>
-          <h3>Liquidity Pool</h3>
-          <p>3% of transactions added to liquidity</p>
-        </div>
-
-        <!-- Development Fund -->
-        <div class="tokenomics-card">
-          <div class="tokenomics-icon">
-            <img src="https://img.icons8.com/fluency/96/000000/development.png" alt="Development Fund">
-          </div>
-          <h3>Development Fund</h3>
-          <p>1% of transactions for future development</p>
+          <h3>Start Allocations</h3>
+          <ul>
+            <li>Team: 10%</li>
+            <li>Liquidity Pool: 5%</li>
+            <li>Public Offering: 85%</li>
+          </ul>
         </div>
       </div>
 
       <!-- Contract Address -->
       <div class="contract-address">
         <h3>Contract Address</h3>
-        <p>0x1234567890abcdef1234567890abcdef12345678</p>
-        <button class="copy-button">📋 Copy Address</button>
+        <p id="contract-address">0x1234567890abcdef1234567890abcdef12345678</p>
+        <button class="copy-button" onclick="copyAddress()">📋 Copy Address</button>
       </div>
     </div>
   </section>
@@ -169,5 +164,17 @@
       <p>🪐 Powered by Martian Technology © 2024</p>
     </div>
   </footer>
+
+  <!-- JavaScript for Copy Address -->
+  <script>
+    function copyAddress() {
+      const address = document.getElementById('contract-address').innerText;
+      navigator.clipboard.writeText(address).then(() => {
+        alert('Contract address copied to clipboard!');
+      }).catch(() => {
+        alert('Failed to copy address. Please copy it manually.');
+      });
+    }
+  </script>
 </body>
 </html>
