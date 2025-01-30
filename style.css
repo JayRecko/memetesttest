@@ -261,4 +261,13 @@ body {
         flex-direction: column;
         text-align: center;
     }
+
+    /* Temporary icon solution */
+.social-button img {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    padding: 4px;
+    border-radius: 4px;
+}
 }
