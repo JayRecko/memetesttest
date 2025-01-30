@@ -1,196 +1,254 @@
 /* Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', system-ui;
+:root {
+  --neon-cyan: #00f3ff;
+  --mars-orange: #ff4d00;
+  --space-purple: #6c00ff;
+  --void-black: #0a0a12;
+  --star-white: #f0f0ff;
+  --ai-blue: #002aff;
 }
 
-:root {
-    --cyber-cyan: #00f3ff;
-    --neon-magenta: #ff00ff;
-    --space-black: #0a0a0f;
-    --star-white: #f0f0ff;
-    --mars-orange: #ff4d00;
-    --deep-space: #15151f;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: var(--space-black);
-    color: var(--star-white);
-    line-height: 1.6;
-    overflow-x: hidden;
+  font-family: 'Exo 2', sans-serif;
+  background-color: var(--void-black);
+  color: var(--star-white);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Layout */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* Typography */
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-.section {
-    padding: 5rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
 }
 
 /* Hero Section */
 .hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(45deg, var(--deep-space) 30%, var(--mars-orange) 150%);
-    overflow: hidden;
+  background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), 
+              url('https://raw.githubusercontent.com/JayRecko/memetesttest/main/route-fifty-lead-image.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-content {
-    text-align: center;
-    position: relative;
-    z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
 }
 
-.hero-logo {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    margin-bottom: 2rem;
-    border: 3px solid var(--cyber-cyan);
-    box-shadow: 0 0 30px rgba(0, 243, 255, 0.4);
+.logo-orb {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+  position: relative;
+  border: 3px solid var(--neon-cyan);
+  box-shadow: 0 0 40px rgba(0, 243, 255, 0.3);
 }
 
-.gradient-text {
-    background: linear-gradient(45deg, var(--cyber-cyan), var(--neon-magenta));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.logo-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.logo-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, 
+    rgba(0, 243, 255, 0.4) 0%, 
+    rgba(0, 243, 255, 0.1) 50%, 
+    transparent 100%);
+  animation: pulse 2s infinite;
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--ai-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-/* Feature Cards */
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.feature-card {
-    background: rgba(255,255,255,0.05);
-    border-radius: 20px;
-    padding: 2rem;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-}
-
-/* Roadmap */
-.roadmap-timeline {
-    position: relative;
-    margin: 4rem 0;
-    padding-left: 30px;
-    border-left: 3px solid var(--cyber-cyan);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 3rem;
-    padding-left: 30px;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -36px;
-    top: 5px;
-    width: 20px;
-    height: 20px;
-    background: var(--neon-magenta);
-    border-radius: 50%;
-}
-
-/* Tokenomics */
-.token-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.token-card {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(255,255,255,0.05);
-    border-radius: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: rgba(240, 240, 255, 0.9);
 }
 
 /* Buttons */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 30px;
-    margin: 10px;
-    border-radius: 50px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    background: linear-gradient(45deg, var(--cyber-cyan), var(--neon-magenta));
-    color: var(--space-black) !important;
+.cta-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
-.btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 243, 255, 0.4);
+.cta-button {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 2px solid var(--neon-cyan);
+  background: linear-gradient(45deg, var(--space-purple), var(--ai-blue));
+  color: var(--star-white);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Social Links */
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+/* Features Grid */
+.features {
+  padding: 5rem 0;
+  background: url('https://raw.githubusercontent.com/JayRecko/memetesttest/main/1_F3PHIV3ZTnJ-2QtPcQixlg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: rgba(12, 12, 30, 0.9);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Roadmap Timeline */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.timeline-item {
+  background: rgba(108, 0, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  border-left: 4px solid var(--neon-cyan);
+}
+
+.timeline-phase {
+  color: var(--neon-cyan);
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* Social Buttons */
 .social-grid {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
-.social-link {
-    font-size: 1.5rem;
-    color: var(--star-white);
-    transition: all 0.3s ease;
+.social-button {
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
-.social-link:hover {
-    color: var(--cyber-cyan);
+.twitter {
+  background: linear-gradient(45deg, #000000, #1da1f2);
 }
 
-/* Footer */
-.copyright {
-    margin-top: 2rem;
-    text-align: center;
-    opacity: 0.7;
+.telegram {
+  background: linear-gradient(45deg, #0088cc, #2aabee);
+}
+
+.social-button:hover {
+  transform: scale(1.05);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        padding: 0 15px;
-    }
-    
-    .hero {
-        height: auto;
-        padding: 4rem 0;
-    }
-    
-    .feature-grid, .token-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .section {
-        padding: 3rem 0;
-    }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .cta-container {
+    flex-direction: column;
+  }
+
+  .features-grid,
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
 }
