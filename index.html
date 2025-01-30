@@ -4,289 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Mars AI - Sovereign AI Meme Coin</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Custom CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui;
-        }
-
-        :root {
-            --cyber-cyan: #00f3ff;
-            --neon-magenta: #ff00ff;
-            --space-black: #0a0a0f;
-            --star-white: #f0f0ff;
-            --mars-orange: #ff4d00;
-            --deep-space: #15151f;
-        }
-
-        body {
-            background: var(--space-black);
-            color: var(--star-white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(45deg, var(--deep-space) 30%, var(--mars-orange) 150%);
-            overflow: hidden;
-        }
-
-        .hero-content {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-logo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            margin-bottom: 2rem;
-            border: 3px solid var(--cyber-cyan);
-            box-shadow: 0 0 30px rgba(0, 243, 255, 0.4);
-        }
-
-        .gradient-text {
-            background: linear-gradient(45deg, var(--cyber-cyan), var(--neon-magenta));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Sections */
-        .section {
-            padding: 5rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* Feature Cards */
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-
-        /* Roadmap */
-        .roadmap-timeline {
-            position: relative;
-            margin: 4rem 0;
-            padding-left: 30px;
-            border-left: 3px solid var(--cyber-cyan);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-            padding-left: 30px;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -36px;
-            top: 5px;
-            width: 20px;
-            height: 20px;
-            background: var(--neon-magenta);
-            border-radius: 50%;
-        }
-
-        /* Tokenomics */
-        .token-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .token-card {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255,255,255,0.05);
-            border-radius: 15px;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 12px 30px;
-            margin: 10px;
-            border-radius: 50px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            background: linear-gradient(45deg, var(--cyber-cyan), var(--neon-magenta));
-            color: var(--space-black) !important;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0, 243, 255, 0.4);
-        }
-
-        /* Social Links */
-        .social-grid {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .social-link {
-            font-size: 1.5rem;
-            color: var(--star-white);
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            color: var(--cyber-cyan);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
-            }
-            
-            .hero {
-                height: auto;
-                padding: 4rem 0;
-            }
-            
-            .feature-grid, .token-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="icon" type="image/webp" href="your-logo.webp">
 </head>
 <body>
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/main/DALL%C2%B7E%202025-01-30%2013.54.07%20-%20A%20futuristic%20AI%20woman%20with%20neon%20green%20hair%20styled%20in%20a%20sleek%20bob%2C%20glowing%20blue%20cybernetic%20eyes%2C%20and%20a%20minimalist%20crown%20of%20light%20symbolizing%20sovereignt.webp" 
-                 alt="Mars AI Logo" 
-                 class="hero-logo">
-            <h1 class="gradient-text" style="font-size: 3.5rem; margin-bottom: 1rem;">Mars AI</h1>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">The First Sovereign AI Meme Ecosystem</p>
-            <div>
+            <img src="mars-ai-logo.webp" alt="Mars AI Logo" class="hero-logo">
+            <h1 class="gradient-text">Mars AI</h1>
+            <p class="hero-subtitle">The First Sovereign AI Meme Ecosystem</p>
+            <div class="hero-cta">
                 <a href="#" class="btn">Buy $MARS</a>
                 <a href="#" class="btn">Live Chart</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="section">
         <div class="container">
-            <h2 class="gradient-text" style="text-align: center; margin-bottom: 2rem;">Welcome to Mars AI</h2>
+            <h2 class="section-title gradient-text">Welcome to Mars AI</h2>
             <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>🚀 AI-Powered Meme Engine</h3>
-                    <p>Our proprietary AI system generates viral memes 24/7 based on real-time market data and social trends</p>
-                </div>
-                <div class="feature-card">
-                    <h3>🛡️ Sovereign Protocol</h3>
-                    <p>Decentralized governance system powered by our AI oracle network</p>
-                </div>
-                <div class="feature-card">
-                    <h3>💎 Auto-Staking</h3>
-                    <p>Earn 89% APY through our automatic staking protocol</p>
-                </div>
+                <!-- Feature cards here -->
             </div>
         </div>
     </section>
 
-    <!-- Roadmap Section -->
     <section class="section">
         <div class="container">
-            <h2 class="gradient-text" style="text-align: center; margin-bottom: 2rem;">Cosmic Roadmap</h2>
+            <h2 class="section-title gradient-text">Cosmic Roadmap</h2>
             <div class="roadmap-timeline">
-                <div class="timeline-item">
-                    <h3>Q3 2024 - Lift Off</h3>
-                    <p>• AI Meme Generator Beta Launch<br>
-                       • Community DAO Establishment<br>
-                       • CEX Listings</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Q4 2024 - Moon Phase</h3>
-                    <p>• Mars AI NFT Collection<br>
-                       • Mobile App Launch<br>
-                       • 1M Holder Milestone</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>2025 - Mars Landing</h3>
-                    <p>• AI Trading Assistant Launch<br>
-                       • Physical Mars Merch Store<br>
-                       • Community Space Event</p>
-                </div>
+                <!-- Timeline items here -->
             </div>
         </div>
     </section>
 
-    <!-- Tokenomics Section -->
     <section class="section">
         <div class="container">
-            <h2 class="gradient-text" style="text-align: center; margin-bottom: 2rem;">Token Economics</h2>
+            <h2 class="section-title gradient-text">Token Economics</h2>
             <div class="token-grid">
-                <div class="token-card">
-                    <h3>1 Billion</h3>
-                    <p>Total Supply</p>
-                </div>
-                <div class="token-card">
-                    <h3>5%</h3>
-                    <p>Transaction Tax</p>
-                </div>
-                <div class="token-card">
-                    <h3>3%</h3>
-                    <p>Auto-Liquidity</p>
-                </div>
-                <div class="token-card">
-                    <h3>2%</h3>
-                    <p>Holder Rewards</p>
-                </div>
+                <!-- Token cards here -->
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="section" style="text-align: center; padding: 3rem 0;">
+    <footer class="section footer">
         <div class="container">
             <div class="social-grid">
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+                <!-- Social links here -->
             </div>
-            <p style="margin-top: 2rem; opacity: 0.7;">© 2024 Mars AI Protocol. All systems nominal.</p>
+            <p class="copyright">© 2024 Mars AI Protocol</p>
         </div>
     </footer>
 </body>
