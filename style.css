@@ -50,7 +50,6 @@ body {
   height: 200px;
   border-radius: 50%;
   margin: 0 auto 2rem;
-  position: relative;
   overflow: hidden;
   border: 3px solid var(--ai-teal);
   box-shadow: 0 0 40px rgba(46, 232, 209, 0.3);
@@ -89,24 +88,23 @@ body {
   font-weight: 600;
   transition: all 0.3s ease;
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
+  border: none;
+  cursor: pointer;
 }
 
 .primary {
   background: var(--mars-red);
   color: var(--text-light);
-  box-shadow: 0 4px 20px rgba(255,77,77,0.3);
 }
 
 .secondary {
-  background: transparent;
-  border: 2px solid var(--space-blue);
-  color: var(--space-blue);
+  background: var(--space-blue);
+  color: var(--text-light);
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Features Section */
@@ -119,7 +117,6 @@ body {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 4rem;
-  position: relative;
 }
 
 .feature-grid {
@@ -177,20 +174,23 @@ body {
   border: 1px solid var(--glass-border);
 }
 
-.tokenomics-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.tokenomics-card ul {
-  list-style: none;
-  padding: 0;
+.tokenomics-value {
+  font-size: 1.75rem;
+  color: var(--ai-teal);
   margin: 1rem 0;
 }
 
-.tokenomics-card ul li {
-  margin: 0.5rem 0;
-  color: var(--text-muted);
+.allocations-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.allocations-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--glass-border);
 }
 
 /* Contract Address */
@@ -200,38 +200,38 @@ body {
   padding: 2rem;
   max-width: 600px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .address-container {
   display: flex;
+  gap: 1rem;
   align-items: center;
-  justify-content: space-between;
   background: rgba(0,0,0,0.3);
   border-radius: 50px;
-  padding: 0.5rem 1rem;
-  margin: 1rem 0;
+  padding: 0.8rem 1.5rem;
+  margin: 1.5rem 0;
 }
 
-.address-container p {
-  margin: 0;
+#contractAddress {
   font-family: monospace;
   color: var(--ai-teal);
+  word-break: break-all;
+  flex: 1;
 }
 
 .copy-button {
   background: var(--space-blue);
   color: white;
   border: none;
-  padding: 0.5rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .copy-button:hover {
   background: var(--mars-red);
-  transform: translateY(-2px);
 }
 
 /* Roadmap Section */
@@ -280,7 +280,7 @@ body {
 }
 
 .twitter {
-  background: #000;
+  background: #1DA1F2;
   color: white;
 }
 
@@ -298,8 +298,10 @@ body {
   padding: 2rem 0;
   text-align: center;
   border-top: 1px solid var(--glass-border);
+  color: var(--text-muted);
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
@@ -307,6 +309,21 @@ body {
   
   .hero-title {
     font-size: 2.5rem;
+  }
+  
+  .address-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+  
+  #contractAddress {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .copy-button {
+    width: 100%;
   }
   
   .feature-grid,
