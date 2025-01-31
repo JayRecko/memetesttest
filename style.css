@@ -251,60 +251,19 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Community Section */
-.community {
+/* Features Section */
+.features {
   padding: 6rem 0;
+  background: var(--bg-light);
 }
 
-.social-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
-.social-button {
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.twitter {
-  background: #1DA1F2;
-  color: white;
-}
-
-.telegram {
-  background: #2AABEE;
-  color: white;
-}
-
-.social-button:hover {
-  transform: translateY(-3px);
-}
-
-/* Footer */
-.footer {
-  padding: 2rem 0;
-  text-align: center;
-  border-top: 1px solid var(--glass-border);
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .about-content {
-    grid-template-columns: 1fr;
-  }
-  
-  .address-container {
-    flex-direction: column;
-  }
-  
-  .copy-button {
-    width: 100%;
-  }
-}
+.feature-card {
+  background: var(--glass-bg);
+  border-radius: 20px;
+ 
