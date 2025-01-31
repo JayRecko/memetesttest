@@ -1,3 +1,4 @@
+/* Modern Color Scheme */
 :root {
   --mars-red: #FF4D4D;
   --space-blue: #4D79FF;
@@ -28,7 +29,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 /* Hero Section */
@@ -68,11 +69,11 @@ body {
 }
 
 .logo-container {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   border: 3px solid var(--ai-teal);
   box-shadow: 0 0 40px rgba(46, 232, 209, 0.3);
 }
@@ -84,13 +85,145 @@ body {
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   background: linear-gradient(45deg, var(--ai-teal), var(--space-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  color: rgba(255,255,255,0
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.primary {
+  background: var(--mars-red);
+  color: var(--text-light);
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid var(--space-blue);
+  color: var(--space-blue);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* About Section */
+.about {
+  padding: 4rem 0;
+  background: var(--bg-light);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Tokenomics Section */
+.tokenomics {
+  padding: 4rem 0;
+  background: var(--bg-dark);
+}
+
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.tokenomics-card {
+  background: var(--glass-bg);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--glass-border);
+}
+
+.tokenomics-value {
+  font-size: 1.5rem;
+  color: var(--ai-teal);
+  margin: 0.75rem 0;
+}
+
+.allocations-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.allocations-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/* Contract Address */
+.contract-address {
+  max-width: 100%;
+  margin: 2rem auto 0;
+}
+
+.address-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+#contractAddress {
+  font-family: monospace;
+  color: var(--ai-teal);
+  word-break: break-all;
+  font-size: 0.8rem;
+}
+
+.copy-button {
+  background: var(--space-blue);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.copy-button:hover {
+  background: var
