@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
   <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/JayRecko/memetesttest/main/DALL%C2%B7E%202025-01-30%2013.54.07%20-%20A%20futuristic%20AI%20woman%20with%20neon%20green%20hair%20styled%20in%20a%20sleek%20bob%2C%20glowing%20blue%20cybernetic%20eyes%2C%20and%20a%20minimalist%20crown%20of%20light%20symbolizing%20sovereignt.webp">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Hero Section -->
@@ -58,12 +59,52 @@
     </div>
   </section>
 
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About Mars AI</h2>
+      <div class="about-content">
+        <div class="about-text" data-aos="fade-right">
+          <p>Mars AI is the first sovereign AI meme coin, combining the power of artificial intelligence with the spirit of the Red Planet. Our ecosystem is designed to revolutionize meme culture through AI-generated content and decentralized governance.</p>
+          <p>Powered by cutting-edge AI technology, Mars AI adapts to market trends, creating viral memes and fostering a strong interplanetary community.</p>
+        </div>
+        <div class="about-image" data-aos="fade-left">
+          <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/main/1_F3PHIV3ZTnJ-2QtPcQixlg.png" alt="Mars AI Ecosystem">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Tokenomics Section -->
   <section class="tokenomics">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">Tokenomics</h2>
       <div class="tokenomics-grid">
-        <!-- ... (keep existing tokenomics content) ... -->
+        <div class="tokenomics-card" data-aos="fade-up">
+          <h3>Total Supply</h3>
+          <p class="tokenomics-value">1,000,000,000</p>
+          <p>Fixed supply with deflationary mechanics</p>
+        </div>
+        <div class="tokenomics-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Holder Rewards</h3>
+          <p class="tokenomics-value">4% Redistribution</p>
+          <p>Automatic rewards for loyal Martians</p>
+        </div>
+        <div class="tokenomics-card" data-aos="fade-up" data-aos-delay="400">
+          <h3>Allocations</h3>
+          <ul class="allocations-list">
+            <li>Team: <span>10%</span></li>
+            <li>Liquidity: <span>5%</span></li>
+            <li>Public: <span>85%</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contract-address" data-aos="fade-up">
+        <h3>Smart Contract</h3>
+        <div class="address-container">
+          <p id="contractAddress">0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b</p>
+          <button class="copy-button" onclick="copyToClipboard()">Copy Address</button>
+        </div>
       </div>
     </div>
   </section>
@@ -71,14 +112,72 @@
   <!-- Roadmap Section -->
   <section class="roadmap">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Development Roadmap</h2>
+      <h2 class="section-title" data-aos="fade-up">Roadmap</h2>
       <div class="timeline">
-        <!-- ... (keep existing roadmap content) ... -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="phase">Phase 1</div>
+          <h3>Genesis Launch</h3>
+          <ul>
+            <li>Token deployment</li>
+            <li>AI meme engine V1</li>
+            <li>Community formation</li>
+          </ul>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="phase">Phase 2</div>
+          <h3>Ecosystem Expansion</h3>
+          <ul>
+            <li>DEX listings</li>
+            <li>NFT integration</li>
+            <li>Governance system</li>
+          </ul>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="phase">Phase 3</div>
+          <h3>AI Integration</h3>
+          <ul>
+            <li>Prediction markets</li>
+            <li>Cross-chain support</li>
+            <li>DAO implementation</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ... (rest of existing sections) ... -->
+  <!-- Community Section -->
+  <section class="community">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Join the Colony</h2>
+      <div class="social-links">
+        <a href="#" class="social-button twitter" data-aos="fade-up">Twitter</a>
+        <a href="#" class="social-button telegram" data-aos="fade-up" data-aos-delay="200">Telegram</a>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>🪐 Powered by Martian Technology © 2024</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    function copyToClipboard() {
+      const address = document.getElementById('contractAddress').innerText;
+      navigator.clipboard.writeText(address).then(() => {
+        const btn = document.querySelector('.copy-button');
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = 'Copy Address', 2000);
+      });
+    }
+  </script>
 </body>
 </html>
