@@ -12,44 +12,187 @@
 </head>
 <body>
  <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="particles-container"></div>
+</* Modern Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(15deg, #0a0a14 0%, #1a1a2c 100%);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('https://raw.githubusercontent.com/JayRecko/memetesttest/main/route-fifty-lead-image.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  mix-blend-mode: luminosity;
+}
+
+.particles-container {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(77,121,255,0.1), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(255,77,77,0.1), transparent 40%);
+}
+
+.hero-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo-title-container {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.hero-logo {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(46,232,209,0.3));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.title-container {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #2EE8D1 0%, #4D79FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.subtitle {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.9);
+  margin-top: 1rem;
+}
+
+.cta-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.cta-button {
+  position: relative;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  border: none;
+  background: linear-gradient(45deg, #FF4D4D 0%, #4D79FF 100%);
+  color: white;
+}
+
+.cta-button.alt {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.hover-effect {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 25%,
+    rgba(255,255,255,0.1) 50%,
+    transparent 75%
+  );
+  background-size: 400% 400%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cta-button:hover .hover-effect {
+  opacity: 1;
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.scrolling-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chevron {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.2; transform: rotate(45deg) translateY(0); }
+  50% { opacity: 1; transform: rotate(45deg) translateY(10px); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
   
-  <div class="hero-content">
-    <div class="logo-title-container">
-      <img src="YOUR_LOGO_URL" 
-           alt="Mars AI Logo" 
-           class="hero-logo"
-           data-aos="zoom-in">
-      
-      <div class="title-container" data-aos="fade-up" data-aos-delay="200">
-        <h1 class="hero-title">
-          <span class="gradient-text">Mars AI</span>
-          <span class="subtitle">Sovereign Meme Ecosystem</span>
-        </h1>
-      </div>
-    </div>
-
-    <div class="cta-container" data-aos="fade-up" data-aos-delay="400">
-      <a href="#" class="cta-button">
-        <span>Buy $MARS</span>
-        <div class="hover-effect"></div>
-      </a>
-      <a href="#" class="cta-button alt">
-        <span>View Chart</span>
-        <div class="hover-effect"></div>
-      </a>
-    </div>
-  </div>
-
-  <div class="scrolling-indicator">
-    <div class="chevron"></div>
-    <div class="chevron"></div>
-    <div class="chevron"></div>
-  </div>
-</section>
-
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .cta-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .cta-button {
+    width: 100%;
+  }
+  
+  .hero-logo {
+    width: 140px;
+    height: 140px;
+  }
+}
   <!-- Features Section -->
   <section class="features">
     <div class="container">
