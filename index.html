@@ -4,317 +4,289 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mars AI - Sovereign Meme Coin</title>
-  <link rel="stylesheet" href="style.css">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
   <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/JayRecko/memetesttest/main/DALL%C2%B7E%202025-01-30%2013.54.07%20-%20A%20futuristic%20AI%20woman%20with%20neon%20green%20hair%20styled%20in%20a%20sleek%20bob%2C%20glowing%20blue%20cybernetic%20eyes%2C%20and%20a%20minimalist%20crown%20of%20light%20symbolizing%20sovereignt.webp">
+  <style>
+    /* Modern Color Scheme */
+    :root {
+      --mars-red: #FF4D4D;
+      --space-blue: #4D79FF;
+      --ai-teal: #2EE8D1;
+      --bg-dark: #0a0a14;
+      --bg-light: #1a1a24;
+      --text-light: #ffffff;
+      --text-muted: rgba(255,255,255,0.8);
+      --glass-bg: rgba(255,255,255,0.05);
+      --glass-border: rgba(255,255,255,0.1);
+    }
+
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Modern Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(15deg, #0a0a14 0%, #1a1a2c 100%);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: url('https://raw.githubusercontent.com/JayRecko/memetesttest/main/route-fifty-lead-image.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.4;
+      mix-blend-mode: luminosity;
+    }
+
+    .particles-container {
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 20% 20%, rgba(77,121,255,0.1), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(255,77,77,0.1), transparent 40%);
+    }
+
+    .hero-content {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .logo-title-container {
+      position: relative;
+      margin-bottom: 4rem;
+    }
+
+    .hero-logo {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 20px rgba(46,232,209,0.3));
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .hero-title {
+      font-size: 4.5rem;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(45deg, #2EE8D1 0%, #4D79FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: rgba(255,255,255,0.9);
+      margin-top: 1rem;
+    }
+
+    .cta-container {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .cta-button {
+      position: relative;
+      padding: 1.2rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      border: none;
+      background: linear-gradient(45deg, #FF4D4D 0%, #4D79FF 100%);
+      color: white;
+      text-decoration: none;
+    }
+
+    .cta-button.alt {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* Tokenomics Section */
+    .tokenomics {
+      padding: 6rem 0;
+      background: var(--bg-dark);
+    }
+
+    .tokenomics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .tokenomics-card {
+      background: var(--glass-bg);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Contract Address Section */
+    .contract-address {
+      max-width: 600px;
+      margin: 4rem auto 0;
+      padding: 0 2rem;
+    }
+
+    .address-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: rgba(0,0,0,0.3);
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    #contractAddress {
+      font-family: monospace;
+      color: var(--ai-teal);
+      word-break: break-all;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .copy-button {
+      background: var(--space-blue);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+    }
+
+    .copy-button:hover {
+      background: var(--mars-red);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 3rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .cta-container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .address-container {
+        flex-direction: column;
+      }
+      
+      .copy-button {
+        width: 100%;
+      }
+    }
+
+    /* Add other section styles from previous versions */
+  </style>
 </head>
 <body>
- <!-- Hero Section -->
-</* Modern Hero Section */
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  background: linear-gradient(15deg, #0a0a14 0%, #1a1a2c 100%);
-}
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="particles-container"></div>
+    
+    <div class="hero-content">
+      <div class="logo-title-container" data-aos="fade-up">
+        <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/main/DALL%C2%B7E%202025-01-30%2013.54.07%20-%20A%20futuristic%20AI%20woman%20with%20neon%20green%20hair%20styled%20in%20a%20sleek%20bob%2C%20glowing%20blue%20cybernetic%20eyes%2C%20and%20a%20minimalist%20crown%20of%20light%20symbolizing%20sovereignt.webp" 
+             alt="Mars AI Logo" 
+             class="hero-logo">
+        <h1 class="hero-title">Mars AI</h1>
+        <p class="hero-subtitle">Sovereign Meme Ecosystem</p>
+      </div>
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: url('https://raw.githubusercontent.com/JayRecko/memetesttest/main/route-fifty-lead-image.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.4;
-  mix-blend-mode: luminosity;
-}
-
-.particles-container {
-  position: absolute;
-  inset: 0;
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(77,121,255,0.1), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(255,77,77,0.1), transparent 40%);
-}
-
-.hero-content {
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo-title-container {
-  position: relative;
-  margin-bottom: 4rem;
-}
-
-.hero-logo {
-  width: 180px;
-  height: 180px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 20px rgba(46,232,209,0.3));
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-.title-container {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.hero-title {
-  font-size: 4.5rem;
-  line-height: 1;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.gradient-text {
-  background: linear-gradient(45deg, #2EE8D1 0%, #4D79FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  display: inline-block;
-}
-
-.subtitle {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: rgba(255,255,255,0.9);
-  margin-top: 1rem;
-}
-
-.cta-container {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-
-.cta-button {
-  position: relative;
-  padding: 1.2rem 2.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  border: none;
-  background: linear-gradient(45deg, #FF4D4D 0%, #4D79FF 100%);
-  color: white;
-}
-
-.cta-button.alt {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-}
-
-.hover-effect {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    45deg,
-    transparent 25%,
-    rgba(255,255,255,0.1) 50%,
-    transparent 75%
-  );
-  background-size: 400% 400%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.cta-button:hover .hover-effect {
-  opacity: 1;
-  animation: shine 6s linear infinite;
-}
-
-@keyframes shine {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-
-.scrolling-indicator {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.chevron {
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(255,255,255,0.3);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 0.2; transform: rotate(45deg) translateY(0); }
-  50% { opacity: 1; transform: rotate(45deg) translateY(10px); }
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-  
-  .subtitle {
-    font-size: 1.2rem;
-  }
-  
-  .cta-container {
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .cta-button {
-    width: 100%;
-  }
-  
-  .hero-logo {
-    width: 140px;
-    height: 140px;
-  }
-}
-  <!-- Features Section -->
-  <section class="features">
-    <div class="container">
-      <h2 class="section-title">Core Features</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-image">
-            <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E_2025_01_30_18_17_00_A_futuristic_female_cyborg_with_neonddd.webp" 
-                 alt="AI-Powered Memes">
-          </div>
-          <h3>AI-Powered Memes</h3>
-          <p>Self-learning algorithm generates viral content daily</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-image">
-            <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E_2025_01_30_18_17_07_A_futuristic_female_cyborg_with_neonddd.webp" 
-                 alt="Community">
-          </div>
-          <h3>Martian Collective</h3>
-          <p>Decentralized governance through AI consensus</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-image">
-            <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E_2025_01_30_18_18_44_A_futuristic_female_cyborg_with_neon.webp" 
-                 alt="Protocol">
-          </div>
-          <h3>Cosmic Protocol</h3>
-          <p>Auto-compounding rewards system</p>
-        </div>
+      <div class="cta-container" data-aos="fade-up" data-aos-delay="200">
+        <a href="#" class="cta-button">Buy $MARS</a>
+        <a href="#" class="cta-button alt">View Chart</a>
       </div>
     </div>
   </section>
 
   <!-- Tokenomics Section -->
   <section class="tokenomics">
-    <div class="container">
-      <h2 class="section-title">Token Distribution</h2>
-      <div class="tokenomics-grid">
-        <div class="tokenomics-card">
-          <h3>Total Supply</h3>
-          <p class="tokenomics-value">1,000,000,000</p>
-          <p>Fixed supply with deflationary mechanics</p>
-        </div>
-        <div class="tokenomics-card">
-          <h3>Holder Rewards</h3>
-          <p class="tokenomics-value">4% Redistribution</p>
-          <p>Automatic rewards for long-term holders</p>
-        </div>
-        <div class="tokenomics-card">
-          <h3>Allocations</h3>
-          <ul class="allocations-list">
-            <li>Team: <span>10%</span></li>
-            <li>Liquidity: <span>5%</span></li>
-            <li>Public: <span>85%</span></li>
-          </ul>
-        </div>
+    <div class="tokenomics-grid">
+      <div class="tokenomics-card">
+        <h3>Total Supply</h3>
+        <p class="tokenomics-value">1,000,000,000</p>
+        <p>Fixed supply with deflationary mechanics</p>
       </div>
-      <div class="contract-address">
-        <h3>Smart Contract</h3>
-        <div class="address-container">
-          <p id="contractAddress">0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b</p>
-          <button class="copy-button" onclick="copyToClipboard()">Copy Address</button>
-        </div>
+      <div class="tokenomics-card">
+        <h3>Holder Rewards</h3>
+        <p class="tokenomics-value">4% Redistribution</p>
+        <p>Automatic rewards for long-term holders</p>
+      </div>
+      <div class="tokenomics-card">
+        <h3>Allocations</h3>
+        <ul class="allocations-list">
+          <li>Team: <span>10%</span></li>
+          <li>Liquidity: <span>5%</span></li>
+          <li>Public: <span>85%</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contract-address">
+      <h3>Smart Contract</h3>
+      <div class="address-container">
+        <p id="contractAddress">0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b</p>
+        <button class="copy-button" onclick="copyToClipboard()">Copy Address</button>
       </div>
     </div>
   </section>
 
-  <!-- Roadmap Section -->
-  <section class="roadmap">
-    <div class="container">
-      <h2 class="section-title">Development Timeline</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="phase">Phase 1</div>
-          <h3>Genesis Launch</h3>
-          <ul>
-            <li>Token deployment</li>
-            <li>AI meme engine V1</li>
-            <li>Community formation</li>
-          </ul>
-        </div>
-        <div class="timeline-item">
-          <div class="phase">Phase 2</div>
-          <h3>Ecosystem Expansion</h3>
-          <ul>
-            <li>DEX listings</li>
-            <li>NFT integration</li>
-            <li>Governance system</li>
-          </ul>
-        </div>
-        <div class="timeline-item">
-          <div class="phase">Phase 3</div>
-          <h3>AI Integration</h3>
-          <ul>
-            <li>Prediction markets</li>
-            <li>Cross-chain support</li>
-            <li>DAO implementation</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Add other sections (Features, Roadmap, Community, Footer) from previous versions -->
 
-  <!-- Community Section -->
-  <section class="community">
-    <div class="container">
-      <h2 class="section-title">Join Community</h2>
-      <div class="social-links">
-        <a href="#" class="social-button twitter">Twitter</a>
-        <a href="#" class="social-button telegram">Telegram</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>Powered by Martian Technology &copy; 2024</p>
-    </div>
-  </footer>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
     function copyToClipboard() {
       const address = document.getElementById('contractAddress').innerText;
       navigator.clipboard.writeText(address).then(() => {
