@@ -1,61 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mars AI - Sovereign Meme Coin</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARS AI - The First Sovereign AI Meme Coin</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="hero" data-aos="fade-in">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="logo-container" data-aos="zoom-in">
-        <img src="your-logo-url.webp" alt="Mars AI Logo" class="logo">
-      </div>
-      <h1 class="hero-title" data-aos="fade-up">Mars AI</h1>
-      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Sovereign Meme Ecosystem</p>
-      <div class="cta-buttons">
-        <a href="#" class="cta-button primary" data-aos="fade-up" data-aos-delay="300">Buy $MARS</a>
-        <a href="#" class="cta-button secondary" data-aos="fade-up" data-aos-delay="400">View Chart</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tokenomics Section -->
-  <section class="tokenomics" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">Tokenomics</h2>
-      <div class="tokenomics-grid">
-        <!-- Tokenomics cards here -->
-      </div>
-      <div class="contract-address">
-        <div class="address-container">
-          <p id="contractAddress">0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b</p>
-          <button class="copy-button" onclick="copyToClipboard()">Copy Address</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-
-    function copyToClipboard() {
-      const address = document.getElementById('contractAddress').innerText;
-      navigator.clipboard.writeText(address).then(() => {
-        const btn = document.querySelector('.copy-button');
-        btn.textContent = 'Copied!';
-        setTimeout(() => btn.textContent = 'Copy Address', 2000);
-      });
-    }
-  </script>
+    <header>
+        <nav>
+            <div class="logo">MARS AI</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#buy">How to Buy</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>The First Sovereign AI Meme Coin</h1>
+        <p>Join the future of decentralized AI on the Red Planet.</p>
+        <a href="#buy" class="cta-button">Buy Now</a>
+    </section>
+    
+    <section id="about">
+        <h2>About MARS AI</h2>
+        <p>MARS AI is the first AI-driven meme coin built for the future of decentralized intelligence.</p>
+    </section>
+    
+    <section id="tokenomics">
+        <h2>Tokenomics</h2>
+        <p>Transparent and community-driven token distribution.</p>
+    </section>
+    
+    <section id="roadmap">
+        <h2>Roadmap</h2>
+        <p>Our journey to Mars and beyond.</p>
+    </section>
+    
+    <section id="buy">
+        <h2>How to Buy</h2>
+        <p>Follow these steps to get MARS AI tokens.</p>
+    </section>
+    
+    <section id="community">
+        <h2>Join the Community</h2>
+        <p>Connect with us on Twitter, Telegram, and Discord.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 MARS AI. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
