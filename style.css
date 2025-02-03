@@ -174,4 +174,117 @@ h1 {
 }
 
 .card {
-    background: rgba(10, 10,
+    background: rgba(10, 10, 22, 0.9);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,70,85,0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.feature-list {
+    list-style: none;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    padding: 1rem;
+    background: rgba(255,70,85,0.05);
+    border-radius: 10px;
+    border-left: 3px solid var(--mars-red);
+}
+
+.emoji {
+    font-size: 1.5rem;
+}
+
+/* Roadmap */
+.roadmap-card {
+    display: grid;
+    gap: 2rem;
+}
+
+.roadmap-phase {
+    padding: 2rem;
+    background: rgba(16, 16, 32, 0.6);
+    border-radius: 15px;
+    position: relative;
+}
+
+.roadmap-phase::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--mars-red);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255,70,85,0.4);
+}
+
+.phase-header {
+    font-family: var(--font-accent);
+    color: var(--mars-red);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.phase-items {
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.phase-items li {
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.phase-items li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--mars-red);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 0.5rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .roadmap-phase {
+        padding: 1.5rem;
+    }
+    
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+}
