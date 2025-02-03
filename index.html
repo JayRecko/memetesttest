@@ -3,110 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARS AI - The Martian Memecoin</title>
+    <title>🚀 MARS AI | The Martian Memecoin</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp" 
-             alt="Mars AI Logo" class="logo">
-    </header>
+    <div class="fixed-background"></div>
+    
+    <div class="content-wrapper">
+        <header>
+            <div class="logo-container">
+                <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp" 
+                     alt="Mars AI Logo" class="logo">
+            </div>
+        </header>
 
-    <main>
-        <section class="hero" style="background-image: url('https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.41%20-%20A%20playful%20and%20vibrant%20Mars-themed%20background%20illustration.%20The%20scene%20features%20a%20colorful%20Martian%20landscape%20with%20rolling%20red%20dunes%2C%20craters%2C%20and%20a%20star.webp')">
-            <div class="hero-content">
-                <h1>MARS AI</h1>
-                <p>The First Martian Memecoin</p>
-                <div class="ca-address">
-                    <span>CA: xxxxxxxxxxxxxxxxxxxxx</span>
-                    <button onclick="copyCA()">Copy</button>
+        <main>
+            <section class="hero">
+                <div class="hero-card">
+                    <h1>MARS AI</h1>
+                    <p class="subtitle">First Interplanetary Memecoin 🤖</p>
+                    <div class="ca-box">
+                        <code class="ca-address">CA: xxxxxxxxxxxxxxxxxxxxx</code>
+                        <button class="copy-button" onclick="copyCA()">📋 Copy</button>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="stats">
-            <div class="stat-item">
-                <h3>Holders</h3>
-                <p id="holderCount">0</p>
-            </div>
-            <div class="stat-item">
-                <h3>Supply</h3>
-                <p>1,000,000,000</p>
-            </div>
-            <div class="stat-item">
-                <h3>Price</h3>
-                <p>$0.0000</p>
-            </div>
-        </section>
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">1B</div>
+                    <div class="stat-label">Total Supply</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="holderCount">1,337</div>
+                    <div class="stat-label">Holders</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$0.0000</div>
+                    <div class="stat-label">Price</div>
+                </div>
+            </section>
 
-        <section class="tokenomics" section-box>
-            <h2>Tokenomics</h2>
-            <ul>
-                <li>🔥 No Taxes</li>
-                <li>🚀 100% Circulating Supply</li>
-                <li>🔓 LP Locked Forever</li>
-                <li>🤖 0% Team Allocation</li>
-            </ul>
-        </section>
-
-        <section class="roadmap" section-box>
-            <h2>Roadmap</h2>
-            <div class="roadmap-grid">
-                <div class="roadmap-item">
-                    <h3>Q1 2025</h3>
-                    <ul>
-                        <li>Token Launch</li>
-                        <li>Initial Listings</li>
-                        <li>First Partnerships</li>
+            <section class="info-section">
+                <h2 class="section-title">🛰️ Tokenomics</h2>
+                <div class="card">
+                    <ul class="feature-list">
+                        <li><span class="emoji">🔥</span> 0% Taxes</li>
+                        <li><span class="emoji">🌌</span> 100% Circulating Supply</li>
+                        <li><span class="emoji">🔒</span> Locked Liquidity</li>
+                        <li><span class="emoji">🤖</span> AI-Powered Rewards</li>
                     </ul>
                 </div>
-                <div class="roadmap-item">
-                    <h3>Q2 2025</h3>
-                    <ul>
-                        <li>Tier 1 CEX Listing</li>
-                        <li>KOL Campaigns</li>
-                        <li>Elon Rocket NFT</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h3>Q3 2025</h3>
-                    <ul>
-                        <li>AI Bot Utility</li>
-                        <li>Staking Rewards</li>
-                        <li>MarsDAO Launch</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <footer>
-        <p>© 2025 MARS AI - The Martian Memecoin</p>
-    </footer>
+            <section class="info-section">
+                <h2 class="section-title">🚀 Roadmap</h2>
+                <div class="card roadmap-card">
+                    <div class="roadmap-phase">
+                        <div class="phase-header">Q1 2025</div>
+                        <ul class="phase-items">
+                            <li>Token Launch</li>
+                            <li>CEX Listings</li>
+                            <li>MarsDAO Formation</li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-phase">
+                        <div class="phase-header">Q2 2025</div>
+                        <ul class="phase-items">
+                            <li>Tier 1 Exchange</li>
+                            <li>Elon Rocket NFT</li>
+                            <li>Global KOL Campaign</li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-phase">
+                        <div class="phase-header">Q3 2025</div>
+                        <ul class="phase-items">
+                            <li>AI Trading Bot</li>
+                            <li>Staking Protocol</li>
+                            <li>Mars Metaverse</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2025 MARS AI - Making Crypto Interplanetary 🌕</p>
+        </footer>
+    </div>
 
     <script>
-        // Simple counter animation
-        function animateValue(obj, start, end, duration) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                obj.innerHTML = Math.floor(progress * (end - start) + start);
-                if (progress < 1) window.requestAnimationFrame(step);
-            };
-            window.requestAnimationFrame(step);
-        }
-        
-        // Initialize counters after page load
-        window.addEventListener('load', () => {
-            const holderCount = document.getElementById('holderCount');
-            animateValue(holderCount, 0, 1337, 2000);
-        });
-
         function copyCA() {
             navigator.clipboard.writeText('xxxxxxxxxxxxxxxxxxxxx');
-            alert('Contract address copied!');
+            alert('Contract address copied to clipboard!');
         }
+
+        // Animated counter
+        window.addEventListener('load', () => {
+            const holderCount = document.getElementById('holderCount');
+            const target = 1337;
+            const duration = 2000;
+            const start = Date.now();
+            
+            const updateCount = () => {
+                const elapsed = Date.now() - start;
+                const progress = Math.min(elapsed / duration, 1);
+                holderCount.textContent = Math.floor(progress * target).toLocaleString();
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCount);
+                }
+            };
+            
+            requestAnimationFrame(updateCount);
+        });
     </script>
 </body>
 </html>
