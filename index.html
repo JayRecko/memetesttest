@@ -1,124 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mars AI - Sovereign Meme Coin</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
-  <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARS AI - The Martian Memecoin</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="particles-container"></div>
-    <div class="hero-content">
-      <div class="logo-container" data-aos="zoom-in">
+    <header>
         <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp" 
-             alt="Mars AI Logo" 
-             class="logo">
-      </div>
-      <h1 class="hero-title" data-aos="fade-up">Mars AI</h1>
-      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">The First Sovereign AI Meme Coin</p>
-      <div class="cta-buttons">
-        <a href="#" class="cta-button primary" data-aos="fade-up" data-aos-delay="300">Buy $MARS</a>
-        <a href="#" class="cta-button secondary" data-aos="fade-up" data-aos-delay="400">Join Community</a>
-      </div>
-    </div>
-  </section>
+             alt="Mars AI Logo" class="logo">
+    </header>
 
-  <!-- Tokenomics Section -->
-  <section class="tokenomics">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Tokenomics</h2>
-      <div class="tokenomics-grid">
-        <div class="tokenomics-card" data-aos="fade-up">
-          <h3>Total Supply</h3>
-          <p class="tokenomics-value">100% Circulating Supply</p>
-          <p>No Taxes - Fully Decentralized</p>
-        </div>
-      </div>
-      <div class="contract-address" data-aos="fade-up">
-        <h3>Smart Contract</h3>
-        <div class="address-container">
-          <p id="contractAddress">xxxxxxxxxxxxxxxxxxxxx</p>
-          <button class="copy-button" onclick="copyToClipboard()">Copy Address</button>
-        </div>
-      </div>
-    </div>
-  </section>
+    <main>
+        <section class="hero" style="background-image: url('https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.41%20-%20A%20playful%20and%20vibrant%20Mars-themed%20background%20illustration.%20The%20scene%20features%20a%20colorful%20Martian%20landscape%20with%20rolling%20red%20dunes%2C%20craters%2C%20and%20a%20star.webp')">
+            <div class="hero-content">
+                <h1>MARS AI</h1>
+                <p>The First Martian Memecoin</p>
+                <div class="ca-address">
+                    <span>CA: xxxxxxxxxxxxxxxxxxxxx</span>
+                    <button onclick="copyCA()">Copy</button>
+                </div>
+            </div>
+        </section>
 
-  <!-- Roadmap Section -->
-  <section class="roadmap">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Roadmap</h2>
-      <div class="timeline">
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="phase">Q1 2025</div>
-          <h3>Launch Token</h3>
-          <ul>
-            <li>Token Deployment</li>
-            <li>Listings</li>
-            <li>Partnerships</li>
-          </ul>
-        </div>
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-          <div class="phase">Q2 2025</div>
-          <h3>T1 CEX & Big KOLs</h3>
-          <ul>
-            <li>Custom Elon Rocket</li>
-          </ul>
-        </div>
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
-          <div class="phase">Q3 2025</div>
-          <h3>AI Bot Utility & Staking</h3>
-          <ul>
-            <li>Holders Rewards Protocol</li>
-          </ul>
-        </div>
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
-          <div class="phase">Q4 2025</div>
-          <h3>Community Expansion</h3>
-          <ul>
-            <li>AI-Powered Features</li>
-            <li>DAO Governance</li>
-          </ul>
-        </div>
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="800">
-          <div class="phase">2026 Q1</div>
-          <h3>Global Domination</h3>
-          <ul>
-            <li>New Partnerships</li>
-            <li>Advanced AI Integration</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section class="stats">
+            <div class="stat-item">
+                <h3>Holders</h3>
+                <p id="holderCount">0</p>
+            </div>
+            <div class="stat-item">
+                <h3>Supply</h3>
+                <p>1,000,000,000</p>
+            </div>
+            <div class="stat-item">
+                <h3>Price</h3>
+                <p>$0.0000</p>
+            </div>
+        </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p>🪐 Powered by Martian Technology © 2025</p>
-    </div>
-  </footer>
+        <section class="tokenomics">
+            <h2>Tokenomics</h2>
+            <ul>
+                <li>🔥 No Taxes</li>
+                <li>🚀 100% Circulating Supply</li>
+                <li>🔓 LP Locked Forever</li>
+                <li>🤖 0% Team Allocation</li>
+            </ul>
+        </section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
+        <section class="roadmap">
+            <h2>Roadmap</h2>
+            <div class="roadmap-grid">
+                <div class="roadmap-item">
+                    <h3>Q1 2025</h3>
+                    <ul>
+                        <li>Token Launch</li>
+                        <li>Initial Listings</li>
+                        <li>First Partnerships</li>
+                    </ul>
+                </div>
+                <div class="roadmap-item">
+                    <h3>Q2 2025</h3>
+                    <ul>
+                        <li>Tier 1 CEX Listing</li>
+                        <li>KOL Campaigns</li>
+                        <li>Elon Rocket NFT</li>
+                    </ul>
+                </div>
+                <div class="roadmap-item">
+                    <h3>Q3 2025</h3>
+                    <ul>
+                        <li>AI Bot Utility</li>
+                        <li>Staking Rewards</li>
+                        <li>MarsDAO Launch</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    function copyToClipboard() {
-      const address = document.getElementById('contractAddress').innerText;
-      navigator.clipboard.writeText(address).then(() => {
-        const btn = document.querySelector('.copy-button');
-        btn.textContent = 'Copied!';
-        setTimeout(() => btn.textContent = 'Copy Address', 2000);
-      });
-    }
-  </script>
+    <footer>
+        <p>© 2025 MARS AI - The Martian Memecoin</p>
+    </footer>
+
+    <script>
+        // Simple counter animation
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) window.requestAnimationFrame(step);
+            };
+            window.requestAnimationFrame(step);
+        }
+        
+        // Initialize counters after page load
+        window.addEventListener('load', () => {
+            const holderCount = document.getElementById('holderCount');
+            animateValue(holderCount, 0, 1337, 2000);
+        });
+
+        function copyCA() {
+            navigator.clipboard.writeText('xxxxxxxxxxxxxxxxxxxxx');
+            alert('Contract address copied!');
+        }
+    </script>
 </body>
 </html>
