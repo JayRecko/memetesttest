@@ -26,7 +26,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.41%20-%20A%20playful%20and%20vibrant%20Mars-themed%20background%20illustration.%20The%20scene%20features%20a%20colorful%20Martian%20landscape%20with%20rolling%20red%20dunes%2C%20craters%2C%20and%20a%20star.webp') no-repeat center center/cover;
+    background: url('YOUR_BG_URL') no-repeat center center/cover;
     z-index: -1;
 }
 
@@ -159,17 +159,6 @@ h1 {
     box-shadow: 0 5px 15px rgba(255,70,85,0.3);
 }
 
-/* Mars Fun Fact */
-.mars-fact {
-    background: rgba(255,140,66,0.1);
-    padding: 1.5rem;
-    border-radius: 15px;
-    margin-top: 2rem;
-    border: 1px dashed var(--martian-orange);
-    text-align: center;
-    font-style: italic;
-}
-
 /* Stats Grid */
 .stats-grid {
     display: grid;
@@ -205,29 +194,124 @@ h1 {
     font-size: 0.95rem;
 }
 
-/* Story Section */
-.story-box {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+/* Enhanced Tokenomics Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
-.story-text {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: center;
-}
-
-.highlight {
-    color: var(--space-blue);
-    font-weight: 700;
-}
-
-.fun-fact {
-    background: rgba(0,243,255,0.1);
-    padding: 1.5rem;
+.feature-card {
+    background: rgba(16, 16, 32, 0.9);
+    padding: 2rem;
     border-radius: 15px;
-    border-left: 4px solid var(--space-blue);
+    text-align: center;
+    border: 1px solid rgba(0,243,255,0.2);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-value {
+    font-family: var(--font-accent);
+    font-size: 3rem;
+    color: var(--space-blue);
+    margin-bottom: 0.5rem;
+}
+
+.feature-label {
+    color: var(--stardust-white);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-desc {
+    color: var(--stardust-white);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Interactive Roadmap */
+.roadmap-track {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.roadmap-card {
+    background: rgba(10, 10, 22, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+    border-left: 5px solid var(--martian-orange);
+    transition: transform 0.3s ease;
+}
+
+.roadmap-card:hover {
+    transform: translateX(10px);
+}
+
+.phase-header {
+    font-family: var(--font-accent);
+    color: var(--martian-orange);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.phase-progress {
+    background: rgba(0,243,255,0.1);
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-family: monospace;
+}
+
+.phase-milestones {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+.phase-milestones li {
+    padding: 1rem;
+    background: rgba(255,70,85,0.05);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.phase-milestones li:hover {
+    transform: translateX(5px);
+}
+
+/* Fun Section */
+.fun-card {
+    background: rgba(255,140,66,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px dashed var(--martian-orange);
+}
+
+.meme-meter {
+    background: rgba(0,0,0,0.3);
+    height: 30px;
+    border-radius: 15px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.meme-progress {
+    background: linear-gradient(90deg, var(--space-blue), var(--mars-red));
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    transition: width 1s ease;
 }
 
 /* Responsive Design */
@@ -240,16 +324,13 @@ h1 {
         font-size: 2.5rem;
     }
     
-    .stats-grid {
+    .stats-grid,
+    .card-grid {
         grid-template-columns: 1fr;
     }
     
-    .card {
+    .roadmap-card {
         padding: 1.5rem;
-    }
-    
-    .social-buttons {
-        flex-direction: column;
     }
     
     .logo {
@@ -257,25 +338,7 @@ h1 {
         height: 90px;
     }
     
-    .subtitle {
-        font-size: 1.1rem;
+    .feature-value {
+        font-size: 2.5rem;
     }
-}
-
-/* Roadmap Phase Animation */
-.roadmap-phase {
-    transition: transform 0.3s ease;
-}
-
-.roadmap-phase:hover {
-    transform: translateX(10px);
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
-    opacity: 0.8;
-    line-height: 1.6;
 }
