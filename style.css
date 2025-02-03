@@ -1,136 +1,163 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+:root {
+    --mars-red: #ff4d4d;
+    --martian-orange: #ff6b35;
+    --space-blue: #2d3047;
+    --robo-silver: #e0e0e0;
+    --crater-gray: #4a4a4a;
 }
 
+/* New Mars-themed decorations */
 body {
-    background: #0a0a0a;
-    color: #ffffff;
+    background: #0a0a0a url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" opacity="0.1"><circle cx="50" cy="50" r="40" stroke="%23ff4d4d" fill="none"/></svg>');
+    background-size: 20px;
 }
 
-header {
-    padding: 1rem;
-    text-align: center;
-    background: rgba(0,0,0,0.8);
-}
-
-.logo {
-    height: 80px;
-    max-width: 100%;
-}
-
-.hero {
-    height: 70vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content {
-    text-align: center;
-    background: rgba(0,0,0,0.7);
-    padding: 2rem;
+/* Futuristic border effects */
+.section-box {
+    border: 2px solid var(--mars-red);
     border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(16,16,16,0.9) 0%, rgba(32,32,32,0.9) 100%);
+    box-shadow: 0 0 15px rgba(255,77,77,0.2);
 }
 
-.hero h1 {
-    font-size: 3rem;
-    color: #ff4d4d;
-    margin-bottom: 1rem;
+.section-box::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--mars-red), var(--martian-orange), transparent);
+    z-index: -1;
+    animation: borderGlow 3s linear infinite;
 }
 
-.ca-address {
-    margin-top: 1.5rem;
-    background: rgba(255,255,255,0.1);
-    padding: 1rem;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
+@keyframes borderGlow {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.3; }
 }
 
-.ca-address button {
-    background: #ff4d4d;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-}
-
-.stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
-    background: #1a1a1a;
-}
-
-.stat-item {
-    text-align: center;
-    padding: 1rem;
-    background: rgba(255,255,255,0.05);
-    border-radius: 10px;
-}
-
-.tokenomics {
-    padding: 2rem;
-    text-align: center;
-}
-
-.tokenomics ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
+/* Enhanced Tokenomics Design */
 .tokenomics li {
-    padding: 1rem;
-    background: rgba(255,77,77,0.1);
-    border-radius: 8px;
+    position: relative;
+    padding-left: 40px;
+    margin: 1rem 0;
+    border-left: 3px solid var(--mars-red);
 }
 
-.roadmap {
-    padding: 2rem;
+.tokenomics li::before {
+    content: '🤖';
+    position: absolute;
+    left: -25px;
+    top: -5px;
+    font-size: 1.5rem;
+    background: var(--space-blue);
+    padding: 5px;
+    border-radius: 50%;
 }
 
+/* Roadmap Timeline Design */
 .roadmap-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    position: relative;
+}
+
+.roadmap-grid::before {
+    content: '';
+    position: absolute;
+    height: 90%;
+    width: 3px;
+    background: var(--mars-red);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .roadmap-item {
-    background: rgba(255,255,255,0.05);
-    padding: 1.5rem;
-    border-radius: 12px;
+    position: relative;
+    background: rgba(16,16,16,0.9) !important;
+    margin: 2rem 0;
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    background: #1a1a1a;
-    margin-top: 2rem;
+.roadmap-item::before {
+    content: '🚀';
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    background: var(--space-blue);
+    padding: 5px;
+    border-radius: 50%;
 }
 
+.roadmap-item:nth-child(even)::before {
+    content: '🛸';
+    left: auto;
+    right: -40px;
+}
+
+/* Crater-like dots pattern */
+.stat-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--crater-gray);
+    border-radius: 50%;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.5;
+}
+
+/* Robotic Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Enhanced CA Address Display */
+.ca-address {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    border: 1px dashed var(--mars-red);
+    padding: 1rem 2rem !important;
+    position: relative;
+}
+
+.ca-address::after {
+    content: 'CONTRACT ADDRESS';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0a0a0a;
+    padding: 0 10px;
+    font-size: 0.8rem;
+    color: var(--mars-red);
+}
+
+/* Mobile Optimization */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
+    .roadmap-grid::before {
+        display: none;
     }
     
-    .stats {
-        grid-template-columns: 1fr;
+    .roadmap-item::before {
+        display: none;
     }
     
-    .tokenomics ul {
-        grid-template-columns: 1fr;
+    .tokenomics li::before {
+        left: 0;
+        top: -20px;
     }
 }
