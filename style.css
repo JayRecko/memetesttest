@@ -26,7 +26,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('YOUR_BG_URL') no-repeat center center/cover;
+    background: url('https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.41%20-%20A%20playful%20and%20vibrant%20Mars-themed%20background%20illustration.%20The%20scene%20features%20a%20colorful%20Martian%20landscape%20with%20rolling%20red%20dunes%2C%20craters%2C%20and%20a%20star.webp') no-repeat center center/cover;
     z-index: -1;
 }
 
@@ -320,25 +320,4 @@ h1 {
         padding: 0.5rem;
     }
     
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    .stats-grid,
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .roadmap-card {
-        padding: 1.5rem;
-    }
-    
-    .logo {
-        width: 90px;
-        height: 90px;
-    }
-    
-    .feature-value {
-        font-size: 2.5rem;
-    }
-}
+   
