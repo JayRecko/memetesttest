@@ -304,7 +304,7 @@ section {
   top: -90px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  width: 190px;
   opacity: 1;
   animation: float1 6s ease-in-out infinite;
   z-index: 3;
