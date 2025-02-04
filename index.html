@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MARS AI | Interplanetary Meme Protocol</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -37,8 +38,8 @@
                     <p class="subtitle">Galaxy's First AI-Curated Meme Protocol</p>
                     <div class="cta-box">
                         <div class="contract-address">
-                            <code>CA: 0x...MARS</code>
-                            <button class="copy-btn">Copy</button>
+                            <code id="contractAddress">CA: 0x...MARS</code>
+                            <button class="copy-btn" onclick="copyContractAddress()">Copy</button>
                         </div>
                         <div class="social-links">
                             <a href="#" class="social-btn">Chart</a>
@@ -50,6 +51,16 @@
                     <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/%E2%80%94Pngtree%E2%80%94cartoon%20illustration%20red%20rocket_8856222.png" class="rocket" alt="Rocket">
                     <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/%E2%80%94Pngtree%E2%80%94cartoon%20hand%20drawn%20creative%20round_4492389.png" class="moon" alt="Moon">
                 </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="mission-content">
+                <h2>Our Mission</h2>
+                <p class="mission-statement">
+                    At MARS AI, we're on a cosmic quest to revolutionize the meme economy! 🚀 Powered by cutting-edge AI, our robots mine the dankest memes from the red dunes of Mars and deliver them straight to your wallet. Whether you're a meme connoisseur or a crypto explorer, join us as we blast off to new frontiers of humor and blockchain innovation!
+                </p>
             </div>
         </section>
 
@@ -127,10 +138,18 @@
     </main>
 
     <script>
-        // Simple animation trigger
+        // Copy Functionality
+        function copyContractAddress() {
+            const address = document.getElementById('contractAddress').textContent;
+            navigator.clipboard.writeText(address).then(() => {
+                alert('Contract address copied to clipboard!');
+            });
+        }
+
+        // Animation Trigger
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if(entry.isIntersecting) {
+                if (entry.isIntersecting) {
                     entry.target.classList.add('animate');
                 }
             });
