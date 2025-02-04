@@ -315,11 +315,11 @@ section {
   position: absolute;
   /* Adjust bottom value so it never overlaps text.
      Here we use 50px above the bottom of the section container. */
-  bottom: -50px;
+  bottom: -60px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  opacity: 0.9;
+  width: 120px;
+  opacity: 0.5;
   animation: float2 8s ease-in-out infinite;
   z-index: 1; /* lower than the text */
 }
