@@ -46,15 +46,15 @@ body {
   transition: transform 0.5s ease;
 }
 
-/* Increase the three main robots to a larger size (800px width) */
+/* Increase the three main robots to a larger size (1000px width on desktop) */
 .robot-1, .robot-2, .robot-3 {
-  width: 800px;
+  width: 1000px;
 }
 
 /* Positioning for the main robots */
-.robot-1 { top: 8%; left: -220px; }
-.robot-2 { bottom: 18%; right: -260px; }
-.robot-3 { top: 48%; left: -180px; }
+.robot-1 { top: 8%; left: -240px; }
+.robot-2 { bottom: 18%; right: -300px; }
+.robot-3 { top: 48%; left: -220px; }
 
 /* Overlay */
 .bg-overlay {
@@ -202,10 +202,11 @@ body {
   height: 600px;
 }
 
+/* Adjust the rocket: move it a bit further right on computer */
 .rocket {
   position: absolute;
   width: 300px;
-  right: -50px;
+  right: -80px;
   bottom: 20%;
   transform: scaleX(-1);
   animation: rocketFloat 4s ease-in-out infinite;
@@ -309,10 +310,10 @@ section {
   z-index: 3;
 }
 
-/* Floating Chick Robot: centered horizontally and lowered to give room */
+/* Floating Chick Robot: now centered horizontally and moved lower (so it appears in the background below the text) */
 .floating-roadmap {
   position: absolute;
-  bottom: 80px;
+  bottom: -100px;
   left: 50%;
   transform: translateX(-50%);
   width: 120px;
@@ -432,7 +433,7 @@ section {
 
   /* Increase sizes for all robot images on mobile */
   .robot-1, .robot-2, .robot-3 {
-    width: 850px;
+    width: 1100px;
   }
   .floating-tokenomics, .floating-roadmap {
     width: 140px;
