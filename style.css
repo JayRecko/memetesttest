@@ -36,16 +36,33 @@ body {
   position: absolute;
 }
 
+/* Shared styling for all decorative robots */
 .deco-robot {
   position: fixed;
   opacity: 0.15;
   mix-blend-mode: luminosity;
   z-index: -1;
+  transition: transform 0.5s ease;
 }
 
-.robot-1 { width: 400px; top: 10%; left: -150px; }
-.robot-2 { width: 350px; bottom: 20%; right: -200px; }
-.robot-3 { width: 300px; top: 50%; left: -100px; }
+/* Increased sizes for existing robots */
+.robot-1 { width: 500px; top: 10%; left: -150px; }
+.robot-2 { width: 450px; bottom: 20%; right: -200px; }
+.robot-3 { width: 400px; top: 50%; left: -100px; }
+
+/* Custom robots integrated as active elements */
+.custom-robot-1 {
+  width: 350px;
+  top: 30%;
+  right: 10%;
+  opacity: 0.2;
+}
+.custom-robot-2 {
+  width: 300px;
+  bottom: 10%;
+  left: 10%;
+  opacity: 0.2;
+}
 
 .bg-overlay {
   position: absolute;
@@ -192,7 +209,7 @@ body {
 .rocket {
   position: absolute;
   width: 300px;
-  /* Shifted 50px further right on desktop */
+  /* Shifted further right on desktop */
   right: -50px;
   bottom: 20%;
   transform: scaleX(-1);
@@ -315,24 +332,6 @@ section {
   text-align: center;
   font-size: 1.1rem;
   line-height: 1.6;
-}
-
-/* Special Designs Section */
-.special-designs {
-  padding: 6rem 0;
-}
-
-.designs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-}
-
-.design-card img {
-  max-width: 100%;
-  border-radius: 10px;
-  border: 2px solid var(--neon-blue);
 }
 
 /* Footer */
