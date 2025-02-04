@@ -6,18 +6,22 @@
   <title>MARS AI | Interplanetary Meme Protocol</title>
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@400;600&family=Fredoka+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Background Elements -->
   <div class="background-wrapper">
     <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.41%20-%20A%20playful%20and%20vibrant%20Mars-themed%20background%20illustration.%20The%20scene%20features%20a%20colorful%20Martian%20landscape%20with%20rolling%20red%20dunes%2C%20craters%2C%20and%20a%20star.webp" class="mars-bg" alt="Mars Background">
     
-    <!-- Main Decorative Robots -->
+    <!-- Existing Robots with increased size -->
     <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20hi.png" class="deco-robot robot-1" alt="Waving Robot">
     <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20think.png" class="deco-robot robot-2" alt="Thinking Robot">
     <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20thumb%20up.png" class="deco-robot robot-3" alt="Thumbs Up Robot">
-    
+
+    <!-- Custom Designs integrated as active decorative elements -->
+    <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/robot%20with%20chick-Photoroom.png" class="deco-robot custom-robot-1" alt="Robot with Woman">
+    <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/rich%20robot-Photoroom.png" class="deco-robot custom-robot-2" alt="Rich Robot">
+
     <div class="bg-overlay"></div>
   </div>
 
@@ -28,7 +32,7 @@
       <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp" class="logo" alt="Mars AI Logo">
       <div class="nav-links">
         <a href="#about">Protocol</a>
-        <a href="#tokenomics">Tokenomics</a>
+        <a href="#tokenomics">Economics</a>
         <a href="#roadmap">Mission</a>
       </div>
     </nav>
@@ -75,14 +79,12 @@
       </div>
     </section>
 
-    <!-- Tokenomics Section with Floating Rich Robot -->
+    <!-- Tokenomics Section -->
     <section id="tokenomics" class="tokenomics-section">
       <div class="section-header">
-        <h2>Tokenomics</h2>
+        <h2>Token Economics</h2>
         <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20thumb%20up.png" class="section-icon" alt="Economy Icon">
       </div>
-      <!-- Floating Rich Robot: centered above the title -->
-      <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/rich%20robot-Photoroom.png" class="floating-tokenomics" alt="Rich Robot">
       <div class="tokenomics-grid">
         <div class="token-card">
           <div class="token-value">0%</div>
@@ -97,14 +99,12 @@
       </div>
     </section>
 
-    <!-- Roadmap Section with Floating Chick Robot -->
+    <!-- Roadmap Section -->
     <section id="roadmap" class="roadmap-section">
       <div class="section-header">
         <h2>Mission Roadmap</h2>
         <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20hi.png" class="section-icon" alt="Roadmap Icon">
       </div>
-      <!-- Floating Chick Robot: centered horizontally and moved down so it stays safely between the roadmap text and footer -->
-      <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/robot%20with%20chick-Photoroom.png" class="floating-roadmap" alt="Chick Robot">
       <div class="roadmap-steps">
         <div class="roadmap-card">
           <div class="phase">Phase 1</div>
@@ -125,8 +125,8 @@
           </ul>
         </div>
       </div>
-      <div class="mission-box">
-        <p>Our meme coin embarks on a playful journey through the cosmos, blending humor with high-tech innovation. Just as spring breathes new life into nature, this coin sprinkles joy and creativity across the universe—inviting every space explorer to join the interstellar party. Its mission shines as brightly as a Martian sunrise, promising endless fun and dynamic rewards in a universe full of possibilities.</p>
+      <div class="mission-paragraph">
+        <p>Our meme coin embarks on a playful journey through the cosmos, blending humor with high-tech innovation. Just as spring breathes new life into nature, this coin sprinkles joy and creativity across the universe, inviting every space explorer to join the interstellar party. Its mission shines as brightly as a Martian sunrise, promising endless fun and dynamic rewards in a universe of possibilities.</p>
       </div>
     </section>
 
@@ -150,7 +150,7 @@
       });
     });
 
-    // Animation trigger for cards
+    // Simple animation trigger
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
