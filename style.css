@@ -318,7 +318,7 @@ section {
   bottom: -60x;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  width: 120px;
   opacity: 1;
   animation: float2 8s ease-in-out infinite;
   z-index: 1; /* lower than the text */
@@ -421,7 +421,7 @@ section {
 
   .rocket {
     width: 200px;
-    right: 80px;
+    right: 120px;
     transform: translateX(0) scaleX(1);
   }
 
