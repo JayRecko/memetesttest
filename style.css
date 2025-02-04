@@ -318,7 +318,7 @@ section {
   bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
+  width: 100px;
   opacity: 1;
   animation: float2 8s ease-in-out infinite;
   z-index: 1; /* lower than the text */
