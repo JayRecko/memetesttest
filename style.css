@@ -421,7 +421,7 @@ section {
 
   .rocket {
     width: 200px;
-    right: -80px;
+    right: 80px;
     transform: translateX(0) scaleX(1);
   }
 
