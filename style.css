@@ -193,7 +193,7 @@ body {
   position: absolute;
   width: 300px;
   /* Shifted 50px further right on desktop */
-  right: -50px;
+  right: 0px;
   bottom: 20%;
   transform: scaleX(-1);
   animation: rocketFloat 4s ease-in-out infinite;
