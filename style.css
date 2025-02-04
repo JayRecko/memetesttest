@@ -310,19 +310,6 @@ section {
   z-index: 3;
 }
 
-/* Floating Chick Robot: centered horizontally and moved down so it stays safely between Roadmap text and footer */
-.floating-roadmap {
-  position: absolute;
-  /* Adjust bottom value so it never overlaps text.
-     Here we use 50px above the bottom of the section container. */
-  bottom: 50x;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  opacity: 1;
-  animation: float2 8s ease-in-out infinite;
-  z-index: 1; /* lower than the text */
-}
 
 /* Ensure Roadmap text (including mission-box) is above the floating chick */
 .mission-box {
