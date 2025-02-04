@@ -305,7 +305,7 @@ section {
   left: 50%;
   transform: translateX(-50%);
   width: 190px;
-  opacity: 1;
+  opacity: 0.5;
   animation: float1 6s ease-in-out infinite;
   z-index: 3;
 }
