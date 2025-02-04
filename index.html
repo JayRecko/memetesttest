@@ -1,167 +1,144 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MARS AI | Interplanetary Meme Protocol</title>
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARS AI | Interplanetary Meme Protocol</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Background Elements -->
-  <div class="background-wrapper">
-    <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.41%20-%20A%20playful%20and%20vibrant%20Mars-themed%20background%20illustration.%20The%20scene%20features%20a%20colorful%20Martian%20landscape%20with%20rolling%20red%20dunes%2C%20craters%2C%20and%20a%20star.webp" class="mars-bg" alt="Mars Background">
-    
-    <!-- Existing Robots with increased size -->
-    <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20hi.png" class="deco-robot robot-1" alt="Waving Robot">
-    <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20think.png" class="deco-robot robot-2" alt="Thinking Robot">
-    <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20thumb%20up.png" class="deco-robot robot-3" alt="Thumbs Up Robot">
+    <!-- Background Elements -->
+    <div class="background-wrapper">
+        <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.41%20-%20A%20playful%20and%20vibrant%20Mars-themed%20background%20illustration.%20The%20scene%20features%20a%20colorful%20Martian%20landscape%20with%20rolling%20red%20dunes%2C%20craters%2C%20and%20a%20star.webp" class="mars-bg" alt="Mars Background">
+        <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20hi.png" class="deco-robot robot-1" alt="Waving Robot">
+        <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20think.png" class="deco-robot robot-2" alt="Thinking Robot">
+        <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20thumb%20up.png" class="deco-robot robot-3" alt="Thumbs Up Robot">
+        <div class="bg-overlay"></div>
+    </div>
 
-    <!-- Custom Designs integrated as active decorative elements -->
-    <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/robot%20with%20chick-Photoroom.png" class="deco-robot custom-robot-1" alt="Robot with Woman">
-    <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/rich%20robot-Photoroom.png" class="deco-robot custom-robot-2" alt="Rich Robot">
-
-    <div class="bg-overlay"></div>
-  </div>
-
-  <!-- Main Content -->
-  <main class="container">
-    <!-- Navigation -->
-    <nav class="main-nav">
-      <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp" class="logo" alt="Mars AI Logo">
-      <div class="nav-links">
-        <a href="#about">Protocol</a>
-        <a href="#tokenomics">Economics</a>
-        <a href="#roadmap">Mission</a>
-      </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>MARS AI</h1>
-          <p class="subtitle">Galaxy's First AI-Curated Meme Protocol</p>
-          <div class="cta-box">
-            <div class="contract-address">
-              <code id="contract">CA: 0x...MARS</code>
-              <button class="copy-btn" id="copyBtn">Copy</button>
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp" class="logo" alt="Mars AI Logo">
+            <div class="nav-links">
+                <a href="#about">Protocol</a>
+                <a href="#tokenomics">Economics</a>
+                <a href="#roadmap">Mission</a>
             </div>
-            <div class="social-links">
-              <a href="#" class="social-btn">Chart</a>
-              <a href="#" class="social-btn">Swap</a>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>MARS AI</h1>
+                    <p class="subtitle">Galaxy's First AI-Curated Meme Protocol</p>
+                    <div class="cta-box">
+                        <div class="contract-address">
+                            <code>CA: 0x...MARS</code>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-btn">Chart</a>
+                            <a href="#" class="social-btn">Swap</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/%E2%80%94Pngtree%E2%80%94cartoon%20illustration%20red%20rocket_8856222.png" class="rocket" alt="Rocket">
+                    <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/%E2%80%94Pngtree%E2%80%94cartoon%20hand%20drawn%20creative%20round_4492389.png" class="moon" alt="Moon">
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/robot%20on%20rocket-Photoroom.png" class="rocket" alt="Rocket">
-          <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/%E2%80%94Pngtree%E2%80%94cartoon%20hand%20drawn%20creative%20round_4492389.png" class="moon" alt="Moon">
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Protocol Section -->
-    <section id="about" class="protocol-section">
-      <div class="section-header">
-        <h2>Protocol Features</h2>
-        <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20think.png" class="section-icon" alt="AI Icon">
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>AI Meme Engine</h3>
-          <p>Neural networks analyzing Martian humor patterns 24/7</p>
-        </div>
-        <div class="feature-card">
-          <h3>Zero-G Liquidity</h3>
-          <p>Automated market making in low orbit environment</p>
-        </div>
-      </div>
-    </section>
+        <!-- Protocol Section -->
+        <section id="about" class="protocol-section">
+            <div class="section-header">
+                <h2>Protocol Features</h2>
+                <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20think.png" class="section-icon" alt="AI Icon">
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>AI Meme Engine</h3>
+                    <p>Neural networks analyzing Martian humor patterns 24/7</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Zero-G Liquidity</h3>
+                    <p>Automated market making in low orbit environment</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Tokenomics Section -->
-    <section id="tokenomics" class="tokenomics-section">
-      <div class="section-header">
-        <h2>Token Economics</h2>
-        <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20thumb%20up.png" class="section-icon" alt="Economy Icon">
-      </div>
-      <div class="tokenomics-grid">
-        <div class="token-card">
-          <div class="token-value">0%</div>
-          <h3>Transaction Tax</h3>
-          <p>Frictionless interplanetary transfers</p>
-        </div>
-        <div class="token-card">
-          <div class="token-value">1B</div>
-          <h3>Total Supply</h3>
-          <p>Precisely calculated orbital distribution</p>
-        </div>
-      </div>
-    </section>
+        <!-- Tokenomics Section -->
+        <section id="tokenomics" class="tokenomics-section">
+            <div class="section-header">
+                <h2>Token Economics</h2>
+                <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20thumb%20up.png" class="section-icon" alt="Economy Icon">
+            </div>
+            <div class="tokenomics-grid">
+                <div class="token-card">
+                    <div class="token-value">0%</div>
+                    <h3>Transaction Tax</h3>
+                    <p>Frictionless interplanetary transfers</p>
+                </div>
+                <div class="token-card">
+                    <div class="token-value">1B</div>
+                    <h3>Total Supply</h3>
+                    <p>Precisely calculated orbital distribution</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Roadmap Section -->
-    <section id="roadmap" class="roadmap-section">
-      <div class="section-header">
-        <h2>Mission Roadmap</h2>
-        <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20hi.png" class="section-icon" alt="Roadmap Icon">
-      </div>
-      <div class="roadmap-steps">
-        <div class="roadmap-card">
-          <div class="phase">Phase 1</div>
-          <h3>Launch Sequence</h3>
-          <ul>
-            <li>Earth Orbit Achievement</li>
-            <li>DEX Listings</li>
-            <li>AI Core Activation</li>
-          </ul>
-        </div>
-        <div class="roadmap-card">
-          <div class="phase">Phase 2</div>
-          <h3>Mars Approach</h3>
-          <ul>
-            <li>Martian Landing Protocol</li>
-            <li>Meme Mining Operations</li>
-            <li>Colony Establishment</li>
-          </ul>
-        </div>
-      </div>
-      <div class="mission-paragraph">
-        <p>Our meme coin embarks on a playful journey through the cosmos, blending humor with high-tech innovation. Just as spring breathes new life into nature, this coin sprinkles joy and creativity across the universe, inviting every space explorer to join the interstellar party. Its mission shines as brightly as a Martian sunrise, promising endless fun and dynamic rewards in a universe of possibilities.</p>
-      </div>
-    </section>
+        <!-- Roadmap Section -->
+        <section id="roadmap" class="roadmap-section">
+            <div class="section-header">
+                <h2>Mission Roadmap</h2>
+                <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/Robot%20hi.png" class="section-icon" alt="Roadmap Icon">
+            </div>
+            <div class="roadmap-steps">
+                <div class="roadmap-card">
+                    <div class="phase">Phase 1</div>
+                    <h3>Launch Sequence</h3>
+                    <ul>
+                        <li>Earth Orbit Achievement</li>
+                        <li>DEX Listings</li>
+                        <li>AI Core Activation</li>
+                    </ul>
+                </div>
+                <div class="roadmap-card">
+                    <div class="phase">Phase 2</div>
+                    <h3>Mars Approach</h3>
+                    <ul>
+                        <li>Martian Landing Protocol</li>
+                        <li>Meme Mining Operations</li>
+                        <li>Colony Establishment</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-      <p>© 2025 MARS AI Protocol - Not financial advice</p>
-      <p>Warning: May cause spontaneous lunar aspirations</p>
-    </footer>
-  </main>
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p>© 2025 MARS AI Protocol - Not financial advice</p>
+            <p>Warning: May cause spontaneous lunar aspirations</p>
+        </footer>
+    </main>
 
-  <script>
-    // Copy function
-    const copyBtn = document.getElementById('copyBtn');
-    const contractCode = document.getElementById('contract').textContent;
-    copyBtn.addEventListener('click', () => {
-      navigator.clipboard.writeText(contractCode).then(() => {
-        copyBtn.textContent = 'Copied';
-        setTimeout(() => {
-          copyBtn.textContent = 'Copy';
-        }, 2000);
-      });
-    });
+    <script>
+        // Simple animation trigger
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
 
-    // Simple animation trigger
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.feature-card, .token-card, .roadmap-card').forEach((el) => {
-      observer.observe(el);
-    });
-  </script>
+        document.querySelectorAll('.feature-card, .token-card, .roadmap-card').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
+
