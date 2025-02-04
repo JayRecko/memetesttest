@@ -315,7 +315,7 @@ section {
   position: absolute;
   /* Adjust bottom value so it never overlaps text.
      Here we use 50px above the bottom of the section container. */
-  bottom: -50x;
+  bottom: 50x;
   left: 50%;
   transform: translateX(-50%);
   width: 120px;
