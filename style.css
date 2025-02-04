@@ -206,7 +206,7 @@ body {
 .rocket {
   position: absolute;
   width: 300px;
-  right: -50px;
+  right: 0px;
   bottom: 20%;
   transform: scaleX(-1);
   animation: rocketFloat 4s ease-in-out infinite;
