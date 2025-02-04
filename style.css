@@ -38,40 +38,48 @@ body {
   position: absolute;
 }
 
-/* Shared styling for all decorative robots */
+/* Shared styling for all decorative elements */
 .deco-robot {
   position: fixed;
   opacity: 0.18;
   mix-blend-mode: luminosity;
-  z-index: -1;
   transition: transform 0.5s ease;
 }
 
-/* Increased sizes for the little robots */
-.robot-1 { width: 550px; top: 8%; left: -180px; }
-.robot-2 { width: 500px; bottom: 18%; right: -220px; }
-.robot-3 { width: 450px; top: 48%; left: -120px; }
+/* Set all three main robots to the same size (500px width) */
+.robot-1, .robot-2, .robot-3 {
+  width: 500px;
+}
 
-/* Custom designs integrated actively */
+/* Positioning for the main robots */
+.robot-1 { top: 8%; left: -180px; }
+.robot-2 { bottom: 18%; right: -220px; }
+.robot-3 { top: 48%; left: -120px; }
+
+/* Custom designs integrated visibly over the background.
+   They now have positions and a z-index so they appear above the background image but behind the main content. */
 .custom-chick {
-  width: 350px;
-  top: 40%;
-  right: 15%;
+  width: 400px;
+  top: 30%;
+  right: 5%;
   opacity: 0.25;
   transform: rotate(-10deg);
+  z-index: -0.5;
 }
 .custom-rich {
-  width: 300px;
-  bottom: 12%;
-  left: 15%;
+  width: 400px;
+  bottom: 5%;
+  left: 5%;
   opacity: 0.25;
   transform: rotate(8deg);
+  z-index: -0.5;
 }
 
 .bg-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
+  /* Lower the overlay opacity so custom elements show through */
   background: linear-gradient(135deg, rgba(10,10,22,0.95) 0%, rgba(255,70,85,0.15) 100%);
 }
 
