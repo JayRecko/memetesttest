@@ -33,13 +33,164 @@
         </header>
 
         <main>
-            <!-- Rest of your HTML content remains exactly the same -->
-            <!-- [All your existing HTML content from <section class="hero"> to </footer>] -->
+
+  <section class="hero">
+                <div class="hero-card">
+                    <h1>MARS AI</h1>
+                    <p class="subtitle">Where Robots Mine Memes on Mars! 🤖</p>
+                    
+                    <div class="social-buttons">
+                        <a href="#" class="twitter-button">🐦 Martian Twitter</a>
+                        <a href="#" class="chart-button">📈 Moon Chart</a>
+                    </div>
+
+                    <div class="ca-box">
+                        <code class="ca-address">CA: xxxxxxxxxxxxxxxxxxxxx</code>
+                        <button class="copy-button" onclick="copyCA()">📋 Copy</button>
+                    </div>
+                </div>
+
+                <div class="mars-fact">
+                    ⚡ 1 MARS = 1 AI Watt-hour (Enough to power a meme reactor)
+                </div>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">9M</div>
+                    <div class="stat-label">Martian Memes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="coloniesCount">0</div>
+                    <div class="stat-label">Colonies</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="rocketsCount">0</div>
+                    <div class="stat-label">Rockets</div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2 class="section-title">🛰️ Tokenomics</h2>
+                <div class="card-grid">
+                    <div class="feature-card">
+                        <div class="feature-value" data-target="0">0%</div>
+                        <div class="feature-label">Taxes</div>
+                        <p class="feature-desc">Our robots hate math</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-value" data-target="1">1B</div>
+                        <div class="feature-label">Supply</div>
+                        <p class="feature-desc">Precision of Mars' coordinates</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-value">∞</div>
+                        <div class="feature-label">LP Locked</div>
+                        <p class="feature-desc">In Martian volcano</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-value">AI</div>
+                        <div class="feature-label">Powered</div>
+                        <p class="feature-desc">(Don't tell Elon)</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2 class="section-title">🚀 Roadmap</h2>
+                <div class="roadmap-track">
+                    <div class="roadmap-card">
+                        <div class="phase-header">Q1 2025</div>
+                        <div class="phase-progress" data-target="Launch & Earth Departure">0/3</div>
+                        <ul class="phase-milestones">
+                            <li>🌍 Earth Gravity Escape</li>
+                            <li>🔥 Memetic Engine Ignition</li>
+                            <li>👽 Alien DEX Listing</li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-card">
+                        <div class="phase-header">Q2 2025</div>
+                        <div class="phase-progress" data-target="Cruise & Space Travel">0/3</div>
+                        <ul class="phase-milestones">
+                            <li>⛏️ Meme Mining Facility</li>
+                            <li>🐦 Elon Tweet Confirmed</li>
+                            <li>🛡️ Anti-FUD Shield</li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-card">
+                        <div class="phase-header">Q3 2025</div>
+                        <div class="phase-progress" data-target="Mars Entry, Descent & Landing">0/3</div>
+                        <ul class="phase-milestones">
+                            <li>🤖 Robot Dance Party</li>
+                            <li>🌌 Zero-G Staking</li>
+                            <li>🎯 First Martian Meme</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <div class="fun-card">
+                    <h3>🧠 Did You Know?</h3>
+                    <p>Our AI runs on 110% pure Martian dankness - 
+                    that's 3x more efficient than Earth-grade humor!</p>
+                    <div class="meme-meter">
+                        <div class="meme-progress" style="width: 78%">
+                            <span>78% DANK</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
+
+        <footer class="footer">
+            <p>⚠️ Warning: May cause spontaneous moon missions</p>
+            <p>© 2025 MARS AI - Not financial advice (rooks may differ)</p>
+        </footer>
+</main>
     </div>
 
-    <script>
-        // Your existing JavaScript remains the same
+   <script>
+        function copyCA() {
+            navigator.clipboard.writeText('xxxxxxxxxxxxxxxxxxxxx');
+            alert('Martian coordinates copied! 🚀');
+        }
+
+        // Enhanced counter animation
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                element.textContent = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Initialize all counters
+        document.addEventListener('DOMContentLoaded', () => {
+            // Stats counters
+            animateValue(document.getElementById('coloniesCount'), 0, 42, 2000);
+            animateValue(document.getElementById('rocketsCount'), 0, 69, 2000);
+
+            // Tokenomics counters
+            document.querySelectorAll('.feature-value').forEach(el => {
+                const target = parseInt(el.dataset.target);
+                if(!isNaN(target)) {
+                    animateValue(el, 0, target, 1500);
+                }
+            });
+
+            // Roadmap progress
+            document.querySelectorAll('.phase-progress').forEach(el => {
+                const target = parseInt(el.dataset.target);
+                animateValue(el, 0, target, 2000);
+                el.textContent = `${target}/${target} ✅`;
+            });
+        });
     </script>
 </body>
 </html>
