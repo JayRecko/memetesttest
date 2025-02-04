@@ -1,181 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚀 MARS AI | Intergalactic Memecoin</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="fixed-background"></div>
-    
-    <div class="content-wrapper">
-        <header>
-            <div class="logo-container">
-                <img src="https://raw.githubusercontent.com/JayRecko/memetesttest/refs/heads/main/DALL%C2%B7E%202025-02-03%2020.42.44%20-%20A%20cartoon-style%20humanoid%20robot%20themed%20around%20Mars%20and%20AI.%20The%20robot%20has%20a%20futuristic%20yet%20playful%20design%2C%20with%20a%20metallic%20red%20and%20silver%20body%2C%20glowing%20.webp" 
-                     alt="Mars AI Logo" class="logo">
-            </div>
-        </header>
+/* ================= ENHANCED DESIGN ================= */
+/* Decorative Robot Elements */
+.robot-decoration {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.15;
+  mix-blend-mode: luminosity;
+  animation: float 6s ease-in-out infinite;
+}
 
-        <main>
-            <section class="hero">
-                <div class="hero-card">
-                    <h1>MARS AI</h1>
-                    <p class="subtitle">Where Robots Mine Memes on Mars! 🤖</p>
-                    
-                    <div class="social-buttons">
-                        <a href="#" class="twitter-button">🐦 Martian Twitter</a>
-                        <a href="#" class="chart-button">📈 Moon Chart</a>
-                    </div>
+.robot-waving {
+  width: 400px;
+  top: 10%;
+  left: -200px;
+  animation-delay: 0.5s;
+}
 
-                    <div class="ca-box">
-                        <code class="ca-address">CA: xxxxxxxxxxxxxxxxxxxxx</code>
-                        <button class="copy-button" onclick="copyCA()">📋 Copy</button>
-                    </div>
-                </div>
+.robot-thinking {
+  width: 350px;
+  bottom: 20%;
+  right: -150px;
+  animation-delay: 1s;
+}
 
-                <div class="mars-fact">
-                    ⚡ 1 MARS = 1 AI Watt-hour (Enough to power a meme reactor)
-                </div>
-            </section>
+.robot-thumbsup {
+  width: 300px;
+  top: 50%;
+  left: -100px;
+  animation-delay: 1.5s;
+}
 
-            <section class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-value">9M</div>
-                    <div class="stat-label">Martian Memes</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="coloniesCount">0</div>
-                    <div class="stat-label">Colonies</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="rocketsCount">0</div>
-                    <div class="stat-label">Rockets</div>
-                </div>
-            </section>
+/* Animated Space Elements */
+.space-object {
+  position: fixed;
+  z-index: -2;
+  pointer-events: none;
+}
 
-            <section class="info-section">
-                <h2 class="section-title">🛰️ Tokenomics</h2>
-                <div class="card-grid">
-                    <div class="feature-card">
-                        <div class="feature-value" data-target="0">0%</div>
-                        <div class="feature-label">Taxes</div>
-                        <p class="feature-desc">Our robots hate math</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-value" data-target="1">1B</div>
-                        <div class="feature-label">Supply</div>
-                        <p class="feature-desc">Precision of Mars' coordinates</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-value">∞</div>
-                        <div class="feature-label">LP Locked</div>
-                        <p class="feature-desc">In Martian volcano</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-value">AI</div>
-                        <div class="feature-label">Powered</div>
-                        <p class="feature-desc">(Don't tell Elon)</p>
-                    </div>
-                </div>
-            </section>
+.moon {
+  width: 150px;
+  top: 50px;
+  right: -50px;
+  animation: rotate 30s linear infinite;
+}
 
-            <section class="info-section">
-                <h2 class="section-title">🚀 Roadmap</h2>
-                <div class="roadmap-track">
-                    <div class="roadmap-card">
-                        <div class="phase-header">Q1 2025</div>
-                        <div class="phase-progress" data-target="Launch & Earth Departure">0/3</div>
-                        <ul class="phase-milestones">
-                            <li>🌍 Earth Gravity Escape</li>
-                            <li>🔥 Memetic Engine Ignition</li>
-                            <li>👽 Alien DEX Listing</li>
-                        </ul>
-                    </div>
-                    <div class="roadmap-card">
-                        <div class="phase-header">Q2 2025</div>
-                        <div class="phase-progress" data-target="Cruise & Space Travel">0/3</div>
-                        <ul class="phase-milestones">
-                            <li>⛏️ Meme Mining Facility</li>
-                            <li>🐦 Elon Tweet Confirmed</li>
-                            <li>🛡️ Anti-FUD Shield</li>
-                        </ul>
-                    </div>
-                    <div class="roadmap-card">
-                        <div class="phase-header">Q3 2025</div>
-                        <div class="phase-progress" data-target="Mars Entry, Descent & Landing">0/3</div>
-                        <ul class="phase-milestones">
-                            <li>🤖 Robot Dance Party</li>
-                            <li>🌌 Zero-G Staking</li>
-                            <li>🎯 First Martian Meme</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+.rocket {
+  width: 120px;
+  bottom: -30px;
+  left: -30px;
+  animation: rocketFloat 4s ease-in-out infinite;
+}
 
-            <section class="info-section">
-                <div class="fun-card">
-                    <h3>🧠 Did You Know?</h3>
-                    <p>Our AI runs on 110% pure Martian dankness - 
-                    that's 3x more efficient than Earth-grade humor!</p>
-                    <div class="meme-meter">
-                        <div class="meme-progress" style="width: 78%">
-                            <span>78% DANK</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+/* Hero Section Enhancements */
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin: 4rem 0;
+}
 
-        <footer class="footer">
-            <p>⚠️ Warning: May cause spontaneous moon missions</p>
-            <p>© 2025 MARS AI - Not financial advice (rooks may differ)</p>
-        </footer>
-    </div>
+.hero-card {
+  position: relative;
+  background: linear-gradient(145deg, 
+    rgba(10, 10, 22, 0.95) 0%,
+    rgba(255,70,85,0.15) 100%);
+  backdrop-filter: blur(12px);
+}
 
-    <script>
-        function copyCA() {
-            navigator.clipboard.writeText('xxxxxxxxxxxxxxxxxxxxx');
-            alert('Martian coordinates copied! 🚀');
-        }
+/* Modern Stats Grid */
+.stats-grid {
+  position: relative;
+  z-index: 1;
+}
 
-        // Enhanced counter animation
-        function animateValue(element, start, end, duration) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                element.textContent = Math.floor(progress * (end - start) + start);
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
-            };
-            window.requestAnimationFrame(step);
-        }
+.stat-card {
+  background: linear-gradient(45deg, 
+    rgba(10, 10, 22, 0.95) 0%,
+    rgba(0,243,255,0.1) 100%);
+  backdrop-filter: blur(8px);
+}
 
-        // Initialize all counters
-        document.addEventListener('DOMContentLoaded', () => {
-            // Stats counters
-            animateValue(document.getElementById('coloniesCount'), 0, 42, 2000);
-            animateValue(document.getElementById('rocketsCount'), 0, 69, 2000);
+/* Animated Tokenomics Cards */
+.feature-card {
+  position: relative;
+  overflow: hidden;
+}
 
-            // Tokenomics counters
-            document.querySelectorAll('.feature-value').forEach(el => {
-                const target = parseInt(el.dataset.target);
-                if(!isNaN(target)) {
-                    animateValue(el, 0, target, 1500);
-                }
-            });
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, 
+    var(--space-blue) 0%,
+    var(--mars-red) 50%,
+    transparent 100%);
+  opacity: 0.1;
+  animation: gradientFlow 8s linear infinite;
+}
 
-            // Roadmap progress
-            document.querySelectorAll('.phase-progress').forEach(el => {
-                const target = parseInt(el.dataset.target);
-                animateValue(el, 0, target, 2000);
-                el.textContent = `${target}/${target} ✅`;
-            });
-        });
-    </script>
-</body>
-</html>
+/* Roadmap Enhancements */
+.roadmap-card {
+  background: rgba(10, 10, 22, 0.95);
+  backdrop-filter: blur(8px);
+  border-left: 5px solid var(--space-blue);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .robot-decoration {
+    display: none;
+  }
+  
+  .moon, .rocket {
+    width: 80px;
+  }
+  
+  .hero-card {
+    padding: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes rocketFloat {
+  0%, 100% { transform: translateY(0) rotate(-45deg); }
+  50% { transform: translateY(-20px) rotate(-35deg); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes gradientFlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
