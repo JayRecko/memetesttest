@@ -46,17 +46,15 @@ body {
   transition: transform 0.5s ease;
 }
 
-/* Set all three main robots to the same size (500px width) */
+/* Set all three main robots to a larger size (600px width) */
 .robot-1, .robot-2, .robot-3 {
-  width: 500px;
+  width: 600px;
 }
 
 /* Positioning for the main robots */
-.robot-1 { top: 8%; left: -180px; }
-.robot-2 { bottom: 18%; right: -220px; }
-.robot-3 { top: 48%; left: -120px; }
-
-/* Remove custom elements from background so they can be placed in sections */
+.robot-1 { top: 8%; left: -200px; }
+.robot-2 { bottom: 18%; right: -240px; }
+.robot-3 { top: 48%; left: -160px; }
 
 /* Overlay */
 .bg-overlay {
@@ -299,23 +297,24 @@ section {
 
 /* Floating custom images for sections */
 
-/* Floating Rich Robot near Tokenomics */
+/* Floating Rich Robot: repositioned above the Tokenomics title, centered horizontally */
 .floating-tokenomics {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 80px;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
   opacity: 1;
   animation: float1 6s ease-in-out infinite;
   z-index: 3;
 }
 
-/* Floating Chick Robot near Mission Roadmap */
+/* Floating Chick Robot near Mission Roadmap remains on the left-bottom */
 .floating-roadmap {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  width: 80px;
+  width: 120px;
   opacity: 1;
   animation: float2 8s ease-in-out infinite;
   z-index: 3;
@@ -428,5 +427,13 @@ section {
 
   section {
     padding: 4rem 0;
+  }
+
+  /* Increase sizes for all robot images on mobile */
+  .robot-1, .robot-2, .robot-3 {
+    width: 650px;
+  }
+  .floating-tokenomics, .floating-roadmap {
+    width: 140px;
   }
 }
