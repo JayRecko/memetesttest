@@ -48,7 +48,7 @@ body {
 
 /* Force the three main robots to be larger (1000px on desktop) */
 .robot-1, .robot-2, .robot-3 {
-  width: 2800px !important;
+  width: 500px !important;
 }
 
 /* Positioning for the main robots */
@@ -441,7 +441,7 @@ section {
 
   /* Increase sizes for all robot images on mobile */
   .robot-1, .robot-2, .robot-3 {
-    width: 2200px !important;
+    width: 500px !important;
   }
   .floating-tokenomics, .floating-roadmap {
     width: 140px;
