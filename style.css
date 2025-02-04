@@ -46,15 +46,15 @@ body {
   transition: transform 0.5s ease;
 }
 
-/* Set all three main robots to a larger size (600px width) */
+/* Increase the three main robots to a larger size (800px width) */
 .robot-1, .robot-2, .robot-3 {
-  width: 600px;
+  width: 800px;
 }
 
 /* Positioning for the main robots */
-.robot-1 { top: 8%; left: -200px; }
-.robot-2 { bottom: 18%; right: -240px; }
-.robot-3 { top: 48%; left: -160px; }
+.robot-1 { top: 8%; left: -220px; }
+.robot-2 { bottom: 18%; right: -260px; }
+.robot-3 { top: 48%; left: -180px; }
 
 /* Overlay */
 .bg-overlay {
@@ -297,7 +297,7 @@ section {
 
 /* Floating custom images for sections */
 
-/* Floating Rich Robot: repositioned above the Tokenomics title, centered horizontally */
+/* Floating Rich Robot: centered above the Tokenomics title */
 .floating-tokenomics {
   position: absolute;
   top: -60px;
@@ -309,11 +309,12 @@ section {
   z-index: 3;
 }
 
-/* Floating Chick Robot near Mission Roadmap remains on the left-bottom */
+/* Floating Chick Robot: centered horizontally and lowered to give room */
 .floating-roadmap {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 120px;
   opacity: 1;
   animation: float2 8s ease-in-out infinite;
@@ -381,13 +382,13 @@ section {
 }
 
 @keyframes float1 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50% { transform: translateY(-15px) translateX(-50%); }
 }
 
 @keyframes float2 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(15px); }
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50% { transform: translateY(15px) translateX(-50%); }
 }
 
 /* Mobile Optimization */
@@ -431,7 +432,7 @@ section {
 
   /* Increase sizes for all robot images on mobile */
   .robot-1, .robot-2, .robot-3 {
-    width: 650px;
+    width: 850px;
   }
   .floating-tokenomics, .floating-roadmap {
     width: 140px;
