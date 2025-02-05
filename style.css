@@ -1,279 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>REPTILIO | Crypto's Coolest Reptile</title>
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/LOGO%20REPTILIO-Photoroom.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu:wght@400;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --reptile-green: #39FF14;
-      --fire-orange: #FF6B35;
-      --deep-swamp: #0A2F23;
-      --scale-pattern: #1A4536;
-      --bone-white: #F0E6D6;
-    }
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('assets/background.png') repeat;
+  z-index: -1;
+  animation: floatBackground 20s linear infinite;
+}
 
-    body {
-      font-family: 'Ubuntu', sans-serif;
-      color: var(--bone-white);
-      background: var(--deep-swamp);
-      overflow-x: hidden;
-    }
+@keyframes floatBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
 
-    .swamp-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      background: url('https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/DALL%C2%B7E%202025-02-05%2010.51.06%20-%20A%20vibrant%20and%20seamless%20background%20texture%20for%20a%20memecoin%20website%2C%20featuring%20neon%20greens%2C%20blues%2C%20and%20purples.%20The%20design%20consists%20of%20abstract%20reptile%20s.webp');
-      background-size: cover;
-      opacity: 0.4;
-    }
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-      position: relative;
-    }
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
 
-    /* Navigation */
-    .nav-bar {
-      padding: 1.5rem 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      background: rgba(10,47,35,0.9);
-      backdrop-filter: blur(10px);
-      z-index: 100;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 
-    .logo {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      border: 3px solid var(--fire-orange);
-      box-shadow: 0 0 20px var(--fire-orange);
-    }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
+nav a:hover {
+  transform: scale(1.1);
+}
 
-    .nav-links a {
-      color: var(--bone-white);
-      text-decoration: none;
-      font-family: 'Press Start 2P', cursive;
-      font-size: 0.8rem;
-      transition: color 0.3s;
-    }
+/* Main Content */
+main {
+  padding: 20px;
+}
 
-    /* Hero Section */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 4rem 0;
-      position: relative;
-    }
+section {
+  margin-bottom: 100px;
+}
 
-    .hero-content {
-      text-align: center;
-      position: relative;
-    }
+h1, h2 {
+  color: #ff00ff;
+  text-shadow: 2px 2px 0 #00ffff;
+}
 
-    .hero-title {
-      font-family: 'Comic Neue', cursive;
-      font-size: 4.5rem;
-      color: var(--reptile-green);
-      text-shadow: 3px 3px 0 var(--fire-orange);
-      margin-bottom: 2rem;
-    }
+.cta {
+  position: relative;
+}
 
-    .cta-box {
-      background: rgba(255,107,53,0.2);
-      padding: 2rem;
-      border-radius: 15px;
-      backdrop-filter: blur(5px);
-      max-width: 600px;
-      margin: 0 auto;
-    }
+#buy-button {
+  background: #00ff00;
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ff00;
+  transition: transform 0.3s ease;
+}
 
-    .contract-box {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
+#buy-button:hover {
+  transform: scale(1.1);
+}
 
-    .contract-address {
-      font-family: monospace;
-      background: var(--scale-pattern);
-      padding: 1rem;
-      border-radius: 8px;
-    }
+.cta-mascot {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 100px;
+  animation: float 3s ease-in-out infinite;
+}
 
-    .deco-reptiles {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
 
-    .reptile-img {
-      position: absolute;
-      max-width: 200px;
-      opacity: 0.8;
-    }
+/* Roadmap */
+.roadmap-container {
+  position: relative;
+  height: 300px;
+}
 
-    /* Sections */
-    .section {
-      padding: 4rem 0;
-    }
+.egg {
+  position: absolute;
+  width: 100px;
+  transition: opacity 0.5s ease;
+}
 
-    .section-title {
-      font-family: 'Press Start 2P', cursive;
-      color: var(--reptile-green);
-      text-align: center;
-      margin-bottom: 3rem;
-      position: relative;
-    }
+.burning-egg { left: 20%; }
+.hatched-egg { right: 20%; opacity: 0; }
 
-    .egg-container {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
+/* Footer */
+footer {
+  position: relative;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
 
-    .egg-img {
-      width: 120px;
-      animation: eggFloat 3s ease-in-out infinite;
-    }
+.social-links img {
+  width: 30px;
+  margin: 0 10px;
+}
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
+.contract-address span {
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+}
 
-    .feature-card {
-      background: rgba(57,255,20,0.1);
-      padding: 2rem;
-      border-radius: 15px;
-      border: 2px solid var(--reptile-green);
-      text-align: center;
-    }
-
-    /* Mobile Optimization */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-title {
-        font-size: 3rem;
-      }
-
-      .reptile-img {
-        max-width: 120px;
-        opacity: 0.6;
-      }
-
-      .egg-container {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-    @keyframes eggFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-  </style>
-</head>
-<body>
-  <div class="swamp-bg"></div>
-
-  <nav class="nav-bar container">
-    <img src="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/LOGO%20REPTILIO-Photoroom.png" class="logo" alt="Reptilio Logo">
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#tokenomics">Tokenomics</a>
-      <a href="#roadmap">Roadmap</a>
-    </div>
-  </nav>
-
-  <main>
-    <section class="hero container">
-      <div class="deco-reptiles">
-        <img src="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/REPTILIO3%20outfit%201-Photoroom.png" 
-             class="reptile-img" style="left: 5%; top: 20%">
-        <img src="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/REPTILIO3%20outfit%202.png" 
-             class="reptile-img" style="right: 10%; top: 30%">
-        <img src="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/REPTILIO1%20POSE-%20debout%20(queue%20cut%2C%20better%20on%20right).png" 
-             class="reptile-img" style="left: 15%; bottom: 20%">
-      </div>
-      
-      <div class="hero-content">
-        <h1 class="hero-title">$REPTILIO</h1>
-        
-        <div class="egg-container">
-          <img src="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/REPTILIO3%20outfit%203-Photoroom.png" 
-               class="egg-img" alt="Fire Egg">
-          <img src="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/REPTILIO3%20outfit%203-Photoroom%20(1).png" 
-               class="egg-img" alt="Hatched Egg">
-        </div>
-
-        <div class="cta-box">
-          <div class="contract-box">
-            <code class="contract-address">CA: 0x...REPTILIO</code>
-            <button class="copy-btn">COPY</button>
-          </div>
-          <div class="social-links">
-            <a href="#" class="social-btn">CHART</a>
-            <a href="#" class="social-btn">BUY</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="about">
-      <h2 class="section-title">ABOUT REPTILIO</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>🦖 100% Community Driven</h3>
-          <p>No dev wallets, no tricks - just pure reptilian energy</p>
-        </div>
-        <div class="feature-card">
-          <h3>🔥 Deflationary Burn</h3>
-          <p>Automatic burns with every transaction</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script>
-    // Simple copy function
-    document.querySelector('.copy-btn').addEventListener('click', () => {
-      navigator.clipboard.writeText('0x...REPTILIO');
-      alert('Contract address copied!');
-    });
-  </script>
-</body>
-</html>
+.footer-mascot {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  width: 80px;
+}
