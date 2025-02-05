@@ -1,279 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>REPTILIO | Crypto's Coolest Reptile</title>
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/LOGO%20REPTILIO-Photoroom.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu:wght@400;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --reptile-green: #39FF14;
-      --fire-orange: #FF6B35;
-      --deep-swamp: #0A2F23;
-      --scale-pattern: #1A4536;
-      --bone-white: #F0E6D6;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Ubuntu', sans-serif;
-      color: var(--bone-white);
-      background: var(--deep-swamp);
-      overflow-x: hidden;
-    }
-
-    .swamp-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      background: url('https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/DALL%C2%B7E%202025-02-05%2010.51.06%20-%20A%20vibrant%20and%20seamless%20background%20texture%20for%20a%20memecoin%20website%2C%20featuring%20neon%20greens%2C%20blues%2C%20and%20purples.%20The%20design%20consists%20of%20abstract%20reptile%20s.webp');
-      background-size: cover;
-      opacity: 0.4;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-      position: relative;
-    }
-
-    /* Navigation */
-    .nav-bar {
-      padding: 1.5rem 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      background: rgba(10,47,35,0.9);
-      backdrop-filter: blur(10px);
-      z-index: 100;
-    }
-
-    .logo {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      border: 3px solid var(--fire-orange);
-      box-shadow: 0 0 20px var(--fire-orange);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      color: var(--bone-white);
-      text-decoration: none;
-      font-family: 'Press Start 2P', cursive;
-      font-size: 0.8rem;
-      transition: color 0.3s;
-    }
-
-    /* Hero Section */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 4rem 0;
-      position: relative;
-    }
-
-    .hero-content {
-      text-align: center;
-      position: relative;
-    }
-
-    .hero-title {
-      font-family: 'Comic Neue', cursive;
-      font-size: 4.5rem;
-      color: var(--reptile-green);
-      text-shadow: 3px 3px 0 var(--fire-orange);
-      margin-bottom: 2rem;
-    }
-
-    .cta-box {
-      background: rgba(255,107,53,0.2);
-      padding: 2rem;
-      border-radius: 15px;
-      backdrop-filter: blur(5px);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .contract-box {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .contract-address {
-      font-family: monospace;
-      background: var(--scale-pattern);
-      padding: 1rem;
-      border-radius: 8px;
-    }
-
-    .deco-reptiles {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-
-    .reptile-img {
-      position: absolute;
-      max-width: 200px;
-      opacity: 0.8;
-    }
-
-    /* Sections */
-    .section {
-      padding: 4rem 0;
-    }
-
-    .section-title {
-      font-family: 'Press Start 2P', cursive;
-      color: var(--reptile-green);
-      text-align: center;
-      margin-bottom: 3rem;
-      position: relative;
-    }
-
-    .egg-container {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-
-    .egg-img {
-      width: 120px;
-      animation: eggFloat 3s ease-in-out infinite;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .feature-card {
-      background: rgba(57,255,20,0.1);
-      padding: 2rem;
-      border-radius: 15px;
-      border: 2px solid var(--reptile-green);
-      text-align: center;
-    }
-
-    /* Mobile Optimization */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-title {
-        font-size: 3rem;
-      }
-
-      .reptile-img {
-        max-width: 120px;
-        opacity: 0.6;
-      }
-
-      .egg-container {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-    @keyframes eggFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reptilio - The Ultimate Reptile Memecoin</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="swamp-bg"></div>
-
-  <nav class="nav-bar container">
-    <img src="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/LOGO%20REPTILIO-Photoroom.png" class="logo" alt="Reptilio Logo">
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#tokenomics">Tokenomics</a>
-      <a href="#roadmap">Roadmap</a>
-    </div>
-  </nav>
-
-  <main>
-    <section class="hero container">
-      <div class="deco-reptiles">
-        <img src="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/REPTILIO3%20outfit%201-Photoroom.png" 
-             class="reptile-img" style="left: 5%; top: 20%">
-        <img src="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/REPTILIO3%20outfit%202.png" 
-             class="reptile-img" style="right: 10%; top: 30%">
-        <img src="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/REPTILIO1%20POSE-%20debout%20(queue%20cut%2C%20better%20on%20right).png" 
-             class="reptile-img" style="left: 15%; bottom: 20%">
-      </div>
-      
-      <div class="hero-content">
-        <h1 class="hero-title">$REPTILIO</h1>
-        
-        <div class="egg-container">
-          <img src="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/REPTILIO3%20outfit%203-Photoroom.png" 
-               class="egg-img" alt="Fire Egg">
-          <img src="https://raw.githubusercontent.com/JayRecko/Reptilio/refs/heads/main/REPTILIO3%20outfit%203-Photoroom%20(1).png" 
-               class="egg-img" alt="Hatched Egg">
-        </div>
-
-        <div class="cta-box">
-          <div class="contract-box">
-            <code class="contract-address">CA: 0x...REPTILIO</code>
-            <button class="copy-btn">COPY</button>
-          </div>
-          <div class="social-links">
-            <a href="#" class="social-btn">CHART</a>
-            <a href="#" class="social-btn">BUY</a>
-          </div>
-        </div>
-      </div>
+    <header>
+        <img src="images/logo.png" alt="Reptilio Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <img src="images/hero-banner.png" alt="Reptilio Hero Banner">
+        <h1>Welcome to Reptilio</h1>
+        <p>The most exciting reptile-themed memecoin in the universe!</p>
+        <a href="#buy" class="btn">Buy Now</a>
     </section>
-
-    <section class="section container" id="about">
-      <h2 class="section-title">ABOUT REPTILIO</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>🦖 100% Community Driven</h3>
-          <p>No dev wallets, no tricks - just pure reptilian energy</p>
-        </div>
-        <div class="feature-card">
-          <h3>🔥 Deflationary Burn</h3>
-          <p>Automatic burns with every transaction</p>
-        </div>
-      </div>
+    
+    <section id="about">
+        <h2>About Reptilio</h2>
+        <p>Reptilio is a memecoin built for fun, community, and innovation in the crypto space. Join us as we slither to the moon!</p>
+        <img src="images/about.png" alt="Reptilio Concept">
     </section>
-  </main>
-
-  <script>
-    // Simple copy function
-    document.querySelector('.copy-btn').addEventListener('click', () => {
-      navigator.clipboard.writeText('0x...REPTILIO');
-      alert('Contract address copied!');
-    });
-  </script>
+    
+    <section id="tokenomics">
+        <h2>Tokenomics</h2>
+        <p>Discover the unique supply and distribution of Reptilio.</p>
+        <img src="images/tokenomics.png" alt="Tokenomics Chart">
+    </section>
+    
+    <section id="roadmap">
+        <h2>Roadmap</h2>
+        <p>Our journey is just beginning. Here’s what’s next for Reptilio.</p>
+        <img src="images/roadmap.png" alt="Roadmap Plan">
+    </section>
+    
+    <section id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with fellow reptile enthusiasts and crypto lovers.</p>
+        <img src="images/community.png" alt="Community Engagement">
+        <a href="https://t.me/ReptilioCommunity" class="btn">Join Telegram</a>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Reptilio. All rights reserved.</p>
+    </footer>
 </body>
 </html>
