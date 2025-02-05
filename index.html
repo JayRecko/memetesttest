@@ -80,6 +80,39 @@
     <img src="assets/reptilio-sitting.png" alt="Reptilio Mascot" class="footer-mascot">
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js">
+    
+ <script>
+// Smooth scrolling
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Roadmap egg animation
+window.addEventListener('scroll', () => {
+  const burningEgg = document.querySelector('.burning-egg');
+  const hatchedEgg = document.querySelector('.hatched-egg');
+  const scrollY = window.scrollY;
+
+  if (scrollY > 500) {
+    burningEgg.style.opacity = 0;
+    hatchedEgg.style.opacity = 1;
+  } else {
+    burningEgg.style.opacity = 1;
+    hatchedEgg.style.opacity = 0;
+  }
+});
+
+// CTA button redirect
+document.getElementById('buy-button').addEventListener('click', () => {
+  window.location.href = 'https://dex.example.com'; // Replace with actual DEX link
+});
+  </script>
+  </script>
 </body>
 </html>
