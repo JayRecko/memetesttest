@@ -1,58 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reptilio - The Ultimate Reptile Memecoin</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reptilio Memecoin</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="Reptilio Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#tokenomics">Tokenomics</a></li>
-                <li><a href="#roadmap">Roadmap</a></li>
-                <li><a href="#community">Community</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="hero">
-        <img src="images/hero-banner.png" alt="Reptilio Hero Banner">
-        <h1>Welcome to Reptilio</h1>
-        <p>The most exciting reptile-themed memecoin in the universe!</p>
-        <a href="#buy" class="btn">Buy Now</a>
+  <!-- Background -->
+  <div class="background"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Reptilio Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tokenomics">Tokenomics</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#how-to-buy">How to Buy</a></li>
+        <li><a href="#community">Community</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <h1>Welcome to Reptilio!</h1>
+      <p>The most fun and vibrant memecoin in the crypto world!</p>
+      <div class="cta">
+        <button id="buy-button">BUY $REPTILIO NOW</button>
+        <img src="assets/reptilio-outfit1.png" alt="Reptilio Mascot" class="cta-mascot">
+      </div>
     </section>
-    
-    <section id="about">
-        <h2>About Reptilio</h2>
-        <p>Reptilio is a memecoin built for fun, community, and innovation in the crypto space. Join us as we slither to the moon!</p>
-        <img src="images/about.png" alt="Reptilio Concept">
-    </section>
-    
+
+    <!-- Tokenomics Section -->
     <section id="tokenomics">
-        <h2>Tokenomics</h2>
-        <p>Discover the unique supply and distribution of Reptilio.</p>
-        <img src="images/tokenomics.png" alt="Tokenomics Chart">
+      <h2>Tokenomics</h2>
+      <p>Details about the token distribution and economics.</p>
     </section>
-    
+
+    <!-- Roadmap Section -->
     <section id="roadmap">
-        <h2>Roadmap</h2>
-        <p>Our journey is just beginning. Here’s what’s next for Reptilio.</p>
-        <img src="images/roadmap.png" alt="Roadmap Plan">
+      <h2>Roadmap</h2>
+      <div class="roadmap-container">
+        <img src="assets/burning-egg.png" alt="Burning Egg" class="egg burning-egg">
+        <img src="assets/hatched-egg.png" alt="Hatched Egg" class="egg hatched-egg">
+      </div>
     </section>
-    
+
+    <!-- How to Buy Section -->
+    <section id="how-to-buy">
+      <h2>How to Buy</h2>
+      <p>Follow these steps to buy $REPTILIO:</p>
+      <img src="assets/reptilio-hood-pose.png" alt="Reptilio Guide" class="guide-mascot">
+    </section>
+
+    <!-- Community Section -->
     <section id="community">
-        <h2>Join Our Community</h2>
-        <p>Connect with fellow reptile enthusiasts and crypto lovers.</p>
-        <img src="images/community.png" alt="Community Engagement">
-        <a href="https://t.me/ReptilioCommunity" class="btn">Join Telegram</a>
+      <h2>Join the Community</h2>
+      <p>Connect with us on social media!</p>
     </section>
-    
-    <footer>
-        <p>&copy; 2025 Reptilio. All rights reserved.</p>
-    </footer>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="#"><img src="assets/social-icons/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="assets/social-icons/telegram.png" alt="Telegram"></a>
+      <a href="#"><img src="assets/social-icons/discord.png" alt="Discord"></a>
+    </div>
+    <div class="contract-address">
+      <p>Contract Address: <span>0x123...abc</span></p>
+    </div>
+    <img src="assets/reptilio-sitting.png" alt="Reptilio Mascot" class="footer-mascot">
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
