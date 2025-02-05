@@ -1,32 +1,449 @@
+:root {
+  --mars-red: #FF4655;
+  --neon-blue: #00F3FF;
+  --space-black: #0A0A16;
+  --starlight: rgba(248, 250, 252, 0.9);
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Exo 2', sans-serif;
+  --font-playful: 'Fredoka One', cursive;
+}
 
- <script>
-// Smooth scrolling
-document.querySelectorAll('nav a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-// Roadmap egg animation
-window.addEventListener('scroll', () => {
-  const burningEgg = document.querySelector('.burning-egg');
-  const hatchedEgg = document.querySelector('.hatched-egg');
-  const scrollY = window.scrollY;
+body {
+  font-family: var(--font-body);
+  color: var(--starlight);
+  overflow-x: hidden;
+  background: var(--space-black);
+}
 
-  if (scrollY > 500) {
-    burningEgg.style.opacity = 0;
-    hatchedEgg.style.opacity = 1;
-  } else {
-    burningEgg.style.opacity = 1;
-    hatchedEgg.style.opacity = 0;
+/* Background Elements */
+.background-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.mars-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+/* Shared styling for all decorative elements */
+.deco-robot {
+  position: fixed;
+  opacity: 0.18;
+  mix-blend-mode: luminosity;
+  transition: transform 0.5s ease;
+}
+
+/* Force the three main robots to be larger (1000px on desktop) */
+.robot-1, .robot-2, .robot-3 {
+  width: 500px !important;
+}
+
+/* Positioning for the main robots */
+.robot-1 { top: 8%; left: -240px; }
+.robot-2 { bottom: 18%; right: -300px; }
+.robot-3 { top: 48%; left: -220px; }
+
+/* Overlay */
+.bg-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(10,10,22,0.95) 0%, rgba(255,70,85,0.15) 100%);
+}
+
+/* Main Container */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0 0 30px rgba(0,243,255,0.3);
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-links a {
+  color: var(--starlight);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--neon-blue);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-family: var(--font-heading);
+  font-size: 4.8rem;
+  background: linear-gradient(45deg, var(--mars-red), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.cta-box {
+  background: rgba(255,70,85,0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--mars-red);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.contract-address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.contract-address code {
+  font-family: monospace;
+  font-size: 1.2rem;
+}
+
+.copy-btn {
+  background: var(--mars-red);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.copy-btn:hover {
+  transform: translateY(-2px);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-btn {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(0,243,255,0.1);
+  border: 1px solid var(--neon-blue);
+  color: var(--neon-blue);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: var(--neon-blue);
+  color: var(--space-black);
+}
+
+.hero-visual {
+  position: relative;
+  height: 600px;
+}
+
+/* Move the rocket further to the right on desktop */
+.rocket {
+  position: absolute;
+  width: 300px;
+  right: -150px;
+  bottom: 20%;
+  transform: scaleX(-1);
+  animation: rocketFloat 4s ease-in-out infinite;
+}
+
+.moon {
+  position: absolute;
+  width: 250px;
+  left: 0;
+  top: 10%;
+  animation: rotate 30s linear infinite;
+}
+
+/* Sections Common Styles */
+section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.section-header h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-icon {
+  width: 80px;
+  opacity: 0.8;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: rgba(0,243,255,0.05);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0,243,255,0.2);
+  backdrop-filter: blur(8px);
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.feature-card.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Tokenomics Section */
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.token-card {
+  background: rgba(255,70,85,0.05);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255,70,85,0.2);
+  text-align: center;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.token-card.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.token-value {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--neon-blue);
+  margin-bottom: 1rem;
+}
+
+/* Floating custom images for sections */
+
+/* Floating Rich Robot: centered above the Tokenomics title */
+.floating-tokenomics {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190px;
+  opacity: 0.5;
+  animation: float1 6s ease-in-out infinite;
+  z-index: 3;
+}
+
+/* Floating Chick Robot: centered horizontally and moved down so it stays safely between Roadmap text and footer */
+.floating-roadmap {
+  position: absolute;
+  /* Adjust bottom value so it never overlaps text.
+     Here we use 50px above the bottom of the section container. */
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  opacity: 0.5;
+  animation: float2 8s ease-in-out infinite;
+  z-index: 1; /* lower than the text */
+}
+
+/* Ensure Roadmap text (including mission-box) is above the floating chick */
+.mission-box {
+  position: relative;
+  z-index: 2;
+}
+
+/* Roadmap Section */
+.roadmap-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.roadmap-card {
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.roadmap-card.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.phase {
+  font-family: var(--font-heading);
+  color: var(--neon-blue);
+  margin-bottom: 1rem;
+}
+
+/* Modern Mission Box with playful font */
+.mission-box {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(255,70,85,0.1));
+  border: 2px solid var(--mars-red);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  font-family: var(--font-playful);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Footer */
+.main-footer {
+  text-align: center;
+  padding: 4rem 0;
+  border-top: 1px solid rgba(255,70,85,0.2);
+}
+
+/* Animations */
+@keyframes rocketFloat {
+  0%, 100% { transform: translateY(0) scaleX(-1); }
+  50% { transform: translateY(-20px) scaleX(-1); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50% { transform: translateY(-15px) translateX(-50%); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50% { transform: translateY(15px) translateX(-50%); }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
   }
-});
 
-// CTA button redirect
-document.getElementById('buy-button').addEventListener('click', () => {
-  window.location.href = 'https://dex.example.com'; // Replace with actual DEX link
-});
-  </script>
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-visual {
+    height: 400px;
+  }
+
+  .rocket {
+    width: 200px;
+    right: 160px;
+    transform: translateX(0) scaleX(1);
+  }
+
+  .moon {
+    width: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  /* Increase sizes for all robot images on mobile */
+  .robot-1, .robot-2, .robot-3 {
+    width: 500px !important;
+  }
+  .floating-tokenomics, .floating-roadmap {
+    width: 140px;
+  }
+}
