@@ -1,142 +1,32 @@
-/* General Styles */
-body {
-  margin: 0;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  color: #fff;
-  overflow-x: hidden;
-}
 
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('assets/background.png') repeat;
-  z-index: -1;
-  animation: floatBackground 20s linear infinite;
-}
+ <script>
+// Smooth scrolling
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
 
-@keyframes floatBackground {
-  0% { background-position: 0 0; }
-  100% { background-position: 100% 100%; }
-}
+// Roadmap egg animation
+window.addEventListener('scroll', () => {
+  const burningEgg = document.querySelector('.burning-egg');
+  const hatchedEgg = document.querySelector('.hatched-egg');
+  const scrollY = window.scrollY;
 
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.5);
-}
+  if (scrollY > 500) {
+    burningEgg.style.opacity = 0;
+    hatchedEgg.style.opacity = 1;
+  } else {
+    burningEgg.style.opacity = 1;
+    hatchedEgg.style.opacity = 0;
+  }
+});
 
-.logo img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  transition: transform 0.3s ease;
-}
-
-nav a:hover {
-  transform: scale(1.1);
-}
-
-/* Main Content */
-main {
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 100px;
-}
-
-h1, h2 {
-  color: #ff00ff;
-  text-shadow: 2px 2px 0 #00ffff;
-}
-
-.cta {
-  position: relative;
-}
-
-#buy-button {
-  background: #00ff00;
-  border: none;
-  padding: 15px 30px;
-  font-size: 20px;
-  color: #000;
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #00ff00;
-  transition: transform 0.3s ease;
-}
-
-#buy-button:hover {
-  transform: scale(1.1);
-}
-
-.cta-mascot {
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 100px;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-/* Roadmap */
-.roadmap-container {
-  position: relative;
-  height: 300px;
-}
-
-.egg {
-  position: absolute;
-  width: 100px;
-  transition: opacity 0.5s ease;
-}
-
-.burning-egg { left: 20%; }
-.hatched-egg { right: 20%; opacity: 0; }
-
-/* Footer */
-footer {
-  position: relative;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-.social-links img {
-  width: 30px;
-  margin: 0 10px;
-}
-
-.contract-address span {
-  color: #00ff00;
-  text-shadow: 0 0 10px #00ff00;
-}
-
-.footer-mascot {
-  position: absolute;
-  bottom: 0;
-  right: 20px;
-  width: 80px;
-}
+// CTA button redirect
+document.getElementById('buy-button').addEventListener('click', () => {
+  window.location.href = 'https://dex.example.com'; // Replace with actual DEX link
+});
+  </script>
